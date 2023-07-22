@@ -125,7 +125,7 @@ const Login = () => {
                                     </div>
 
                                     <p className=' mt-4 text-white text-lg'>
-                                        New to Creative Capture? <Link to='/sign-up' className='hover:text-black'>Please SignUp</Link>
+                                        New to Creative Capture? <Link to='/signUp' className='hover:text-black hover:underline'>Please SignUp</Link>
                                     </p>
 
                                     <div className="form-control mt-6">
