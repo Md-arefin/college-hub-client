@@ -23,8 +23,8 @@ const CollegeCard = () => {
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 mt-16'>
                 {
                     colleges.map((college) =>
-                        <div key={college.id} className="card md:card-side bg-base-100 shadow-xl">
-                            <figure><img src={college?.collegeImage} className='h-full w-[450px] rounded-md' alt={college.collegeName} /></figure>
+                        <div key={college.id} className="card md:card-side bg-base-100 shadow-xl group">
+                            <figure><img src={college?.collegeImage} className='h-full w-[550px] rounded-md group-hover:scale-125 transition' alt={college.collegeName} /></figure>
                             <div className="card-body">
                                 <h2 className="card-title lg:text-3xl">{college.collegeName}</h2>
                                 <p><span className='font-semibold text-lg'>Admission date:</span> {college.admissionDates}</p>
