@@ -36,7 +36,7 @@ const AdmissionPage = () => {
 
             <div className='my-16 flex flex-col-reverse lg:flex-row gap-5 justify-center'>
 
-                <div className="overflow-x-auto w-full border-2 rounded-md">
+                <div className="overflow-x-auto w-full border-2 rounded-md lg:w-[50%]">
                     <table className="table table-zebra">
                         <thead>
                             <tr>
@@ -50,7 +50,7 @@ const AdmissionPage = () => {
                                 colleges.map((clg, i) =>
                                     < tr key={i} >
                                         <th className='text-center'>{i + 1}</th>
-                                        <td className='text-lg'>{clg.collegeName}</td>
+                                        <td className='text-lg cursor-pointer'>{clg.collegeName}</td>
                                     </tr>
                                 )
                             }
@@ -58,7 +58,7 @@ const AdmissionPage = () => {
                     </table>
                 </div>
 
-                <div>
+                <div className='lg:w-[50%]'>
                     <img className='w-full' src="/images/9.jpg" alt="" />
                 </div>
             </div>
