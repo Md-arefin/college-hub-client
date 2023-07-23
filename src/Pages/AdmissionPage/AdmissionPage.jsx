@@ -31,7 +31,7 @@ const AdmissionPage = () => {
             {/* college name */}
 
             <h3 className='text-center my-16 text-2xl md:text-3xl lg:text-5xl font-semibold'>
-            Seamless Admission Process: Enter Your Details and Secure Your Future
+                Seamless Admission Process: Enter Your Details and Secure Your Future
             </h3>
 
             <div className='my-16 flex flex-col-reverse lg:flex-row gap-5 justify-center'>
@@ -58,9 +58,79 @@ const AdmissionPage = () => {
                     </table>
                 </div>
 
-                <div className='lg:w-[50%]'>
+                <div className='lg:w-[50%] relative'>
                     <img className='w-full' src="/images/9.jpg" alt="" />
+                    <div className='absolute top-[82%] w-[50%] left-[250px] bg-black text-white h-[200px] p-10 flex items-center justify-center'>
+                        <h4 className='text-center my-16 text-lg md:text-xl lg:text-3xl font-semibold'> Step into Your Future with Confidence</h4>
+                    </div>
                 </div>
+            </div>
+
+            {/* form */}
+
+            <div className='mx-auto w-1/2'>
+
+                <h3 className='text-center my-16 text-2xl md:text-3xl lg:text-5xl font-semibold'>
+                    Admission Application
+                </h3>
+
+                <div className="hero-content">
+
+                    <div className="card w-full shadow-2xl bg-rose-900">
+                        <div className="card-body">
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text text-white">Name</span>
+                                </label>
+                                <input type="text" placeholder="Candidate Name" className="input input-bordered" />
+                            </div>
+
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text text-white">Subject</span>
+                                </label>
+                                <input type="text" placeholder="Subject" className="input input-bordered" />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text text-white">Email</span>
+                                </label>
+                                <input type="text" placeholder="Candidate Email" className="input input-bordered" />
+                            </div>
+
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text text-white">Phone</span>
+                                </label>
+                                <input type="text" placeholder="Candidate Phone number" className="input input-bordered" />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text text-white">Address</span>
+                                </label>
+                                <input type="text" placeholder="address" className="input input-bordered" />
+                            </div>
+
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text text-white">Date Of Birth</span>
+                                </label>
+                                <input type="text" placeholder="date of birth" className="input input-bordered" />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text text-white">Photo</span>
+                                </label>
+                                <input type="text" placeholder="photo" className="input input-bordered" />
+                            </div>
+
+                            <div className="form-control mt-6">
+                                <button className="btn bg-black text-white hover:bg-white hover:text-black w-1/2 border-none mx-auto">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
 
