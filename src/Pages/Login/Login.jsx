@@ -3,14 +3,15 @@ import { Controls, Player } from '@lottiefiles/react-lottie-player';
 import { useForm } from "react-hook-form";
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-// import { AuthContext } from '../../Provider/AuthProvider';
-// import Swal from 'sweetalert2';
+import { AuthContext } from '../../Providers/AuthProvider';
+import Swal from 'sweetalert2';
+
 
 
 const Login = () => {
 
     const [error, setError] = useState('');
-    // const { googleSignIn, signIn } = useContext(AuthContext);
+    const { googleSignIn, signIn } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.form?.pathname || '/';
@@ -20,49 +21,49 @@ const Login = () => {
     const onSubmit = data => {
         setError('');
 
-        // console.log(data)
-        // signIn(data.email, data.password)
-        //     .then(result =>{
-        //         const loggedUser = result.user;
-        //         Swal.fire({
-        //             position: 'center',
-        //             icon: 'success',
-        //             title: 'Login Successful',
-        //             showConfirmButton: false,
-        //             timer: 1500
-        //         })
-        //         navigate(from, {replace: true });
-        //     })
-        //     .catch(err =>{
-        //         console.log(err.message)
-        //         setError(err.message)
-        //     })
+        console.log(data)
+        signIn(data.email, data.password)
+            .then(result =>{
+                const loggedUser = result.user;
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Login Successful',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                navigate(from, {replace: true });
+            })
+            .catch(err =>{
+                console.log(err.message)
+                setError(err.message)
+            })
     }
 
     console.log(watch("example")); // watch input value by passing the name of it
 
     const handleGoogle = () => {
         setError('');
-        // googleSignIn()
-        //     .then(result =>{
-        //         const loggedUser = result.user;
-        //         console.log(loggedUser)
+        googleSignIn()
+            .then(result =>{
+                const loggedUser = result.user;
+                console.log(loggedUser)
 
-        //         // save user
+                // save user
 
-        //         Swal.fire({
-        //             position: 'center',
-        //             icon: 'success',
-        //             title: 'Login Successful',
-        //             showConfirmButton: false,
-        //             timer: 1500
-        //         })
-        //         navigate(from, {replace: true });
-        //     })
-        //     .catch( err => {
-        //         console.log(err.message)
-        //         setError(err.message)
-        //     })
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Login Successful',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                navigate(from, {replace: true });
+            })
+            .catch( err => {
+                console.log(err.message)
+                setError(err.message)
+            })
     }
 
 

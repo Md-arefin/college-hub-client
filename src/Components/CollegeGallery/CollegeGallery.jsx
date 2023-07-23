@@ -22,33 +22,33 @@ const CollegeGallery = () => {
             <div id="image-gallery" className=" grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-16">
 
                 <a className="gallery-item" href=" ">
-                    <img src="public/images/1.jpg" className=' lg:h-[300px] w-[450px]' alt="Image 1" />
+                    <img src="/images/1.jpg" className=' lg:h-[300px] w-[450px]' alt="Image 1" />
                 </a>
                 
                 <a className="gallery-item" href=" ">
-                    <img src="public/images/5.jpg" alt="Image 2" className=' md:h-[208px] lg:h-[300px]' />
+                    <img src="/images/5.jpg" alt="Image 2" className=' md:h-[208px] lg:h-[300px]' />
                 </a>
 
                 <a className="gallery-item" href=" ">
-                    <img src="public/images/2.jpg" alt="Image 1" className=' md:h-[208px] lg:h-[300px]' />
+                    <img src="/images/2.jpg" alt="Image 1" className=' md:h-[208px] lg:h-[300px]' />
                 </a>
                 
                 <a className="gallery-item" href=" ">
-                    <img src="public/images/3.jpg" alt="Image 2" className=' md:h-[208px] lg:h-[300px]' />
+                    <img src="/images/3.jpg" alt="Image 2" className=' md:h-[208px] lg:h-[300px]' />
                 </a>
                 <a className="gallery-item" href=" ">
-                    <img src="public/images/4.jpg" className='md:h-[208px] lg:h-[300px] w-[450px] ' alt="Image 1" />
-                </a>
-                
-                <a className="gallery-item" href=" ">
-                    <img src="public/images/8.jpg" alt="Image 2" className=' md:h-[208px] lg:h-[300px]' />
-                </a>
-                <a className="gallery-item" href=" ">
-                    <img src="public/images/6.jpg" alt="Image 1" className=' md:h-[208px] lg:h-[300px]' />
+                    <img src="/images/4.jpg" className='md:h-[208px] lg:h-[300px] w-[450px]' alt="Image 1" />
                 </a>
                 
                 <a className="gallery-item" href=" ">
-                    <img src="public/images/7.jpg" alt="Image 2" className=' md:h-[208px] lg:h-[300px]' />
+                    <img src="/images/8.jpg" alt="Image 2" className=' md:h-[208px] lg:h-[300px]' />
+                </a>
+                <a className="gallery-item" href=" ">
+                    <img src="/images/6.jpg" alt="Image 1" className=' md:h-[208px] lg:h-[300px]' />
+                </a>
+                
+                <a className="gallery-item" href=" ">
+                    <img src="/images/7.jpg" alt="Image 2" className=' md:h-[208px] lg:h-[300px]' />
                 </a>
                 
             </div>

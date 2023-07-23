@@ -10,6 +10,7 @@ import SignUp from './Pages/SignUp/SignUp.jsx';
 import CollegePage from './Pages/CollegePage/CollegePage.jsx';
 import AdmissionPage from './Pages/AdmissionPage/AdmissionPage.jsx';
 import MyCollege from './Pages/MyCollege/MyCollege.jsx';
+import AuthProvider from './Providers/AuthProvider.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,15 +24,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/colleges",
-        element: <CollegePage/> 
+        element: <CollegePage />
       },
       {
         path: "/admission",
-        element: <AdmissionPage/>
+        element: <AdmissionPage />
       },
       {
         path: "/my-college",
-        element: <MyCollege/>
+        element: <MyCollege />
       },
     ]
   },
@@ -47,8 +48,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div className='px-4 md:5 lg:px-8'>
-      <RouterProvider router={router} />
-    </div>
+    <AuthProvider>
+      <div className='px-4 md:5 lg:px-8'>
+        <RouterProvider router={router} />
+      </div>
+    </AuthProvider>
   </React.StrictMode>,
 )
