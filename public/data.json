@@ -1,93 +1,522 @@
 [
-    {
-      "id": 1,
-      "collegeImage": "https://i.ibb.co/9ZkFbQ3/zhanhui-li-1iux-Ws-IZ6ko-unsplash.jpg",
-      "collegeName": "City University",
-      "admissionDates": "September 1 - September 20",
-      "events": ["Welcome Party", "Annual Science Fair", "Cultural Showcase"],
-      "researchHistory": "City University is renowned for its pioneering research in urban planning and sustainability.",
-      "sports": ["Soccer", "Table Tennis", "Track and Field"]
+  {
+    "id": 1,
+    "collegeImage": "https://i.ibb.co/9ZkFbQ3/zhanhui-li-1iux-Ws-IZ6ko-unsplash.jpg",
+    "collegeName": "City University",
+    "admissionDates": "September 1 - September 20",
+    "events": [
+      "Welcome Party",
+      "Annual Science Fair",
+      "Cultural Showcase"
+    ],
+    "researchHistory": "City University is renowned for its pioneering research in urban planning and sustainability.",
+    "sports": [
+      "Soccer",
+      "Table Tennis",
+      "Track and Field"
+    ],
+    "admissionProcess": {
+      "eligibilityCriteria": "Minimum 75% in High School",
+      "applicationProcedure": "Online application form, followed by entrance exam and interview"
     },
-    {
-      "id": 2,
-      "collegeImage": "https://i.ibb.co/FHB1yQC/michael-marsh-U0d-BV-Qei-Yk-unsplash.jpg",
-      "collegeName": "Liberty College",
-      "admissionDates": "July 10 - July 31",
-      "events": ["Freshers' Bash", "Literary Symposium", "Sports Carnival"],
-      "researchHistory": "Liberty College has a long-standing tradition of promoting liberal arts and encouraging critical thinking.",
-      "sports": ["Basketball", "Swimming", "Chess"]
+    "eventsDetails": {
+      "techFest": {
+        "date": "November 5 - November 7",
+        "description": "Annual technical festival showcasing innovations and projects"
+      }
     },
-    {
-      "id": 3,
-      "collegeImage": "https://i.ibb.co/jyhXX3T/vadim-sherbakov-d6eb-Y-fa-OO0-unsplash.jpg",
-      "collegeName": "TechHub Institute",
-      "admissionDates": "August 25 - September 15",
-      "events": ["Tech Summit", "Hackathon", "Cultural Fusion"],
-      "researchHistory": "TechHub Institute is at the forefront of technology research, fostering innovation and entrepreneurship.",
-      "sports": ["Badminton", "Cricket", "Gymnastics"]
+    "researchWorks": {
+      "history": "Established in 1905, Example University has a long history of research excellence.",
+      "currentProjects": [
+        "Cancer Research",
+        "Renewable Energy Solutions",
+        "AI and Machine Learning"
+      ]
     },
-    {
-      "id": 4,
-      "collegeImage": "https://i.ibb.co/qRbZybf/somesh-kesarla-suresh-h-Wqr-I3-Cy-Pu-M-unsplash.jpg",
-      "collegeName": "Greenwood University",
-      "admissionDates": "June 5 - June 30",
-      "events": ["Green Initiatives Expo", "Literary Festival", "Annual Sports Gala"],
-      "researchHistory": "Greenwood University is committed to environmental research and sustainability projects.",
-      "sports": ["Tennis", "Archery", "Yoga"]
-    },
-    {
-      "id": 5,
-      "collegeImage": "https://i.ibb.co/2Mr0WsY/keming-tan-x-Myg-EKgsnes-unsplash.jpg",
-      "collegeName": "Pacific Coast College",
-      "admissionDates": "October 5 - October 25",
-      "events": ["Coastal Cleanup Drive", "Tech Symposium", "Cultural Extravaganza"],
-      "researchHistory": "Pacific Coast College specializes in marine biology research and oceanic studies.",
-      "sports": ["Surfing", "Volleyball", "Sailing"]
-    },
-    {
-      "id": 6,
-      "collegeImage": "https://i.ibb.co/9ZkFbQ3/zhanhui-li-1iux-Ws-IZ6ko-unsplash.jpg",
-      "collegeName": "Global Business School",
-      "admissionDates": "December 1 - December 20",
-      "events": ["MBA Conference", "International Business Summit", "Cultural Carnival"],
-      "researchHistory": "Global Business School is recognized for its research in international trade and business strategies.",
-      "sports": ["Basketball", "Squash", "Karate"]
-    },
-    {
-      "id": 7,
-      "collegeImage": "https://i.ibb.co/FHB1yQC/michael-marsh-U0d-BV-Qei-Yk-unsplash.jpg",
-      "collegeName": "Heritage Institute",
-      "admissionDates": "August 10 - August 31",
-      "events": ["Heritage Day Celebrations", "Literary Symposium", "Sports Extravaganza"],
-      "researchHistory": "Heritage Institute preserves cultural history and conducts research in archaeology and anthropology.",
-      "sports": ["Cricket", "Football", "Kabaddi"]
-    },
-    {
-      "id": 8,
-      "collegeImage": "https://i.ibb.co/jyhXX3T/vadim-sherbakov-d6eb-Y-fa-OO0-unsplash.jpg",
-      "collegeName": "Health Sciences University",
-      "admissionDates": "April 15 - May 15",
-      "events": ["Medical Conference", "Health Fair", "Cultural Fest"],
-      "researchHistory": "Health Sciences University excels in medical research and healthcare advancements.",
-      "sports": ["Basketball", "Tennis", "Swimming"]
-    },
-    {
-      "id": 9,
-      "collegeImage": "https://i.ibb.co/qRbZybf/somesh-kesarla-suresh-h-Wqr-I3-Cy-Pu-M-unsplash.jpg",
-      "collegeName": "Innovation Academy",
-      "admissionDates": "October 1 - October 30",
-      "events": ["Innovation Expo", "Start-up Pitch Competition", "Cultural Fusion"],
-      "researchHistory": "Innovation Academy fosters creativity and entrepreneurship through cutting-edge research.",
-      "sports": ["Table Tennis", "Chess", "Gymnastics"]
-    },
-    {
-      "id": 10,
-      "collegeImage": "https://i.ibb.co/2Mr0WsY/keming-tan-x-Myg-EKgsnes-unsplash.jpg",
-      "collegeName": "Art and Design College",
-      "admissionDates": "July 15 - August 15",
-      "events": ["Art Exhibition", "Design Symposium", "Cultural Showcase"],
-      "researchHistory": "Art and Design College celebrates artistic expression and contributes to design research.",
-      "sports": ["Yoga", "Badminton", "Tennis"]
+    "sportsCategories": {
+      "indoorSports": [
+        "Table Tennis",
+        "Chess",
+        "Badminton"
+      ],
+      "outdoorSports": [
+        "Football",
+        "Cricket",
+        "Basketball"
+      ],
+      "waterSports": [
+        "Swimming",
+        "Rowing",
+        "Sailing"
+      ]
     }
-  ]
-  
+  },
+  {
+    "id": 2,
+    "collegeImage": "https://i.ibb.co/FHB1yQC/michael-marsh-U0d-BV-Qei-Yk-unsplash.jpg",
+    "collegeName": "Liberty College",
+    "admissionDates": "July 10 - July 31",
+    "events": [
+      "Freshers' Bash",
+      "Literary Symposium",
+      "Sports Carnival"
+    ],
+    "researchHistory": "Liberty College has a long-standing tradition of promoting liberal arts and encouraging critical thinking.",
+    "sports": [
+      "Basketball",
+      "Swimming",
+      "Chess"
+    ],
+    "admissionProcess": {
+      "eligibilityCriteria": "Minimum 75% in High School",
+      "applicationProcedure": "Online application form, followed by entrance exam and interview"
+    },
+    "eventsDetails": {
+      "techFest": {
+        "date": "November 5 - November 7",
+        "description": "Annual technical festival showcasing innovations and projects"
+      }
+    },
+    "researchWorks": {
+      "history": "Established in 1905, Example University has a long history of research excellence.",
+      "currentProjects": [
+        "Cancer Research",
+        "Renewable Energy Solutions",
+        "AI and Machine Learning"
+      ]
+    },
+    "sportsCategories": {
+      "indoorSports": [
+        "Table Tennis",
+        "Chess",
+        "Badminton"
+      ],
+      "outdoorSports": [
+        "Football",
+        "Cricket",
+        "Basketball"
+      ],
+      "waterSports": [
+        "Swimming",
+        "Rowing",
+        "Sailing"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "collegeImage": "https://i.ibb.co/jyhXX3T/vadim-sherbakov-d6eb-Y-fa-OO0-unsplash.jpg",
+    "collegeName": "TechHub Institute",
+    "admissionDates": "August 25 - September 15",
+    "events": [
+      "Tech Summit",
+      "Hackathon",
+      "Cultural Fusion"
+    ],
+    "researchHistory": "TechHub Institute is at the forefront of technology research, fostering innovation and entrepreneurship.",
+    "sports": [
+      "Badminton",
+      "Cricket",
+      "Gymnastics"
+    ],
+    "admissionProcess": {
+      "eligibilityCriteria": "Minimum 75% in High School",
+      "applicationProcedure": "Online application form, followed by entrance exam and interview"
+    },
+    "eventsDetails": {
+      "techFest": {
+        "date": "November 5 - November 7",
+        "description": "Annual technical festival showcasing innovations and projects"
+      }
+    },
+    "researchWorks": {
+      "history": "Established in 1905, Example University has a long history of research excellence.",
+      "currentProjects": [
+        "Cancer Research",
+        "Renewable Energy Solutions",
+        "AI and Machine Learning"
+      ]
+    },
+    "sportsCategories": {
+      "indoorSports": [
+        "Table Tennis",
+        "Chess",
+        "Badminton"
+      ],
+      "outdoorSports": [
+        "Football",
+        "Cricket",
+        "Basketball"
+      ],
+      "waterSports": [
+        "Swimming",
+        "Rowing",
+        "Sailing"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "collegeImage": "https://i.ibb.co/qRbZybf/somesh-kesarla-suresh-h-Wqr-I3-Cy-Pu-M-unsplash.jpg",
+    "collegeName": "Greenwood University",
+    "admissionDates": "June 5 - June 30",
+    "events": [
+      "Green Initiatives Expo",
+      "Literary Festival",
+      "Annual Sports Gala"
+    ],
+    "researchHistory": "Greenwood University is committed to environmental research and sustainability projects.",
+    "sports": [
+      "Tennis",
+      "Archery",
+      "Yoga"
+    ],
+    "admissionProcess": {
+      "eligibilityCriteria": "Minimum 75% in High School",
+      "applicationProcedure": "Online application form, followed by entrance exam and interview"
+    },
+    "eventsDetails": {
+      "techFest": {
+        "date": "November 5 - November 7",
+        "description": "Annual technical festival showcasing innovations and projects"
+      }
+    },
+    "researchWorks": {
+      "history": "Established in 1905, Example University has a long history of research excellence.",
+      "currentProjects": [
+        "Cancer Research",
+        "Renewable Energy Solutions",
+        "AI and Machine Learning"
+      ]
+    },
+    "sportsCategories": {
+      "indoorSports": [
+        "Table Tennis",
+        "Chess",
+        "Badminton"
+      ],
+      "outdoorSports": [
+        "Football",
+        "Cricket",
+        "Basketball"
+      ],
+      "waterSports": [
+        "Swimming",
+        "Rowing",
+        "Sailing"
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "collegeImage": "https://i.ibb.co/2Mr0WsY/keming-tan-x-Myg-EKgsnes-unsplash.jpg",
+    "collegeName": "Pacific Coast College",
+    "admissionDates": "October 5 - October 25",
+    "events": [
+      "Coastal Cleanup Drive",
+      "Tech Symposium",
+      "Cultural Extravaganza"
+    ],
+    "researchHistory": "Pacific Coast College specializes in marine biology research and oceanic studies.",
+    "sports": [
+      "Surfing",
+      "Volleyball",
+      "Sailing"
+    ],
+    "admissionProcess": {
+      "eligibilityCriteria": "Minimum 75% in High School",
+      "applicationProcedure": "Online application form, followed by entrance exam and interview"
+    },
+    "eventsDetails": {
+      "techFest": {
+        "date": "November 5 - November 7",
+        "description": "Annual technical festival showcasing innovations and projects"
+      }
+    },
+    "researchWorks": {
+      "history": "Established in 1905, Example University has a long history of research excellence.",
+      "currentProjects": [
+        "Cancer Research",
+        "Renewable Energy Solutions",
+        "AI and Machine Learning"
+      ]
+    },
+    "sportsCategories": {
+      "indoorSports": [
+        "Table Tennis",
+        "Chess",
+        "Badminton"
+      ],
+      "outdoorSports": [
+        "Football",
+        "Cricket",
+        "Basketball"
+      ],
+      "waterSports": [
+        "Swimming",
+        "Rowing",
+        "Sailing"
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "collegeImage": "https://i.ibb.co/9ZkFbQ3/zhanhui-li-1iux-Ws-IZ6ko-unsplash.jpg",
+    "collegeName": "Global Business School",
+    "admissionDates": "December 1 - December 20",
+    "events": [
+      "MBA Conference",
+      "International Business Summit",
+      "Cultural Carnival"
+    ],
+    "researchHistory": "Global Business School is recognized for its research in international trade and business strategies.",
+    "sports": [
+      "Basketball",
+      "Squash",
+      "Karate"
+    ],
+    "admissionProcess": {
+      "eligibilityCriteria": "Minimum 75% in High School",
+      "applicationProcedure": "Online application form, followed by entrance exam and interview"
+    },
+    "eventsDetails": {
+      "techFest": {
+        "date": "November 5 - November 7",
+        "description": "Annual technical festival showcasing innovations and projects"
+      }
+    },
+    "researchWorks": {
+      "history": "Established in 1905, Example University has a long history of research excellence.",
+      "currentProjects": [
+        "Cancer Research",
+        "Renewable Energy Solutions",
+        "AI and Machine Learning"
+      ]
+    },
+    "sportsCategories": {
+      "indoorSports": [
+        "Table Tennis",
+        "Chess",
+        "Badminton"
+      ],
+      "outdoorSports": [
+        "Football",
+        "Cricket",
+        "Basketball"
+      ],
+      "waterSports": [
+        "Swimming",
+        "Rowing",
+        "Sailing"
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "collegeImage": "https://i.ibb.co/FHB1yQC/michael-marsh-U0d-BV-Qei-Yk-unsplash.jpg",
+    "collegeName": "Heritage Institute",
+    "admissionDates": "August 10 - August 31",
+    "events": [
+      "Heritage Day Celebrations",
+      "Literary Symposium",
+      "Sports Extravaganza"
+    ],
+    "researchHistory": "Heritage Institute preserves cultural history and conducts research in archaeology and anthropology.",
+    "sports": [
+      "Cricket",
+      "Football",
+      "Kabaddi"
+    ],
+    "admissionProcess": {
+      "eligibilityCriteria": "Minimum 75% in High School",
+      "applicationProcedure": "Online application form, followed by entrance exam and interview"
+    },
+    "eventsDetails": {
+      "techFest": {
+        "date": "November 5 - November 7",
+        "description": "Annual technical festival showcasing innovations and projects"
+      }
+    },
+    "researchWorks": {
+      "history": "Established in 1905, Example University has a long history of research excellence.",
+      "currentProjects": [
+        "Cancer Research",
+        "Renewable Energy Solutions",
+        "AI and Machine Learning"
+      ]
+    },
+    "sportsCategories": {
+      "indoorSports": [
+        "Table Tennis",
+        "Chess",
+        "Badminton"
+      ],
+      "outdoorSports": [
+        "Football",
+        "Cricket",
+        "Basketball"
+      ],
+      "waterSports": [
+        "Swimming",
+        "Rowing",
+        "Sailing"
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "collegeImage": "https://i.ibb.co/jyhXX3T/vadim-sherbakov-d6eb-Y-fa-OO0-unsplash.jpg",
+    "collegeName": "Health Sciences University",
+    "admissionDates": "April 15 - May 15",
+    "events": [
+      "Medical Conference",
+      "Health Fair",
+      "Cultural Fest"
+    ],
+    "researchHistory": "Health Sciences University excels in medical research and healthcare advancements.",
+    "sports": [
+      "Basketball",
+      "Tennis",
+      "Swimming"
+    ],
+    "admissionProcess": {
+      "eligibilityCriteria": "Minimum 75% in High School",
+      "applicationProcedure": "Online application form, followed by entrance exam and interview"
+    },
+    "eventsDetails": {
+      "techFest": {
+        "date": "November 5 - November 7",
+        "description": "Annual technical festival showcasing innovations and projects"
+      }
+    },
+    "researchWorks": {
+      "history": "Established in 1905, Example University has a long history of research excellence.",
+      "currentProjects": [
+        "Cancer Research",
+        "Renewable Energy Solutions",
+        "AI and Machine Learning"
+      ]
+    },
+    "sportsCategories": {
+      "indoorSports": [
+        "Table Tennis",
+        "Chess",
+        "Badminton"
+      ],
+      "outdoorSports": [
+        "Football",
+        "Cricket",
+        "Basketball"
+      ],
+      "waterSports": [
+        "Swimming",
+        "Rowing",
+        "Sailing"
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "collegeImage": "https://i.ibb.co/qRbZybf/somesh-kesarla-suresh-h-Wqr-I3-Cy-Pu-M-unsplash.jpg",
+    "collegeName": "Innovation Academy",
+    "admissionDates": "October 1 - October 30",
+    "events": [
+      "Innovation Expo",
+      "Start-up Pitch Competition",
+      "Cultural Fusion"
+    ],
+    "researchHistory": "Innovation Academy fosters creativity and entrepreneurship through cutting-edge research.",
+    "sports": [
+      "Table Tennis",
+      "Chess",
+      "Gymnastics"
+    ],
+    "admissionProcess": {
+      "eligibilityCriteria": "Minimum 75% in High School",
+      "applicationProcedure": "Online application form, followed by entrance exam and interview"
+    },
+    "eventsDetails": {
+      "techFest": {
+        "date": "November 5 - November 7",
+        "description": "Annual technical festival showcasing innovations and projects"
+      }
+    },
+    "researchWorks": {
+      "history": "Established in 1905, Example University has a long history of research excellence.",
+      "currentProjects": [
+        "Cancer Research",
+        "Renewable Energy Solutions",
+        "AI and Machine Learning"
+      ]
+    },
+    "sportsCategories": {
+      "indoorSports": [
+        "Table Tennis",
+        "Chess",
+        "Badminton"
+      ],
+      "outdoorSports": [
+        "Football",
+        "Cricket",
+        "Basketball"
+      ],
+      "waterSports": [
+        "Swimming",
+        "Rowing",
+        "Sailing"
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "collegeImage": "https://i.ibb.co/2Mr0WsY/keming-tan-x-Myg-EKgsnes-unsplash.jpg",
+    "collegeName": "Art and Design College",
+    "admissionDates": "July 15 - August 15",
+    "events": [
+      "Art Exhibition",
+      "Design Symposium",
+      "Cultural Showcase"
+    ],
+    "researchHistory": "Art and Design College celebrates artistic expression and contributes to design research.",
+    "sports": [
+      "Yoga",
+      "Badminton",
+      "Tennis"
+    ],
+    "admissionProcess": {
+      "eligibilityCriteria": "Minimum 75% in High School",
+      "applicationProcedure": "Online application form, followed by entrance exam and interview"
+    },
+    "eventsDetails": {
+      "techFest": {
+        "date": "November 5 - November 7",
+        "description": "Annual technical festival showcasing innovations and projects"
+      }
+    },
+    "researchWorks": {
+      "history": "Established in 1905, Example University has a long history of research excellence.",
+      "currentProjects": [
+        "Cancer Research",
+        "Renewable Energy Solutions",
+        "AI and Machine Learning"
+      ]
+    },
+    "sportsCategories": {
+      "indoorSports": [
+        "Table Tennis",
+        "Chess",
+        "Badminton"
+      ],
+      "outdoorSports": [
+        "Football",
+        "Cricket",
+        "Basketball"
+      ],
+      "waterSports": [
+        "Swimming",
+        "Rowing",
+        "Sailing"
+      ]
+    }
+  }
+]

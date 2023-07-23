@@ -3,15 +3,16 @@ import { Controls, Player } from '@lottiefiles/react-lottie-player';
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from "react-icons/fc";
-// import { AuthContext } from '../../Provider/AuthProvider';
+import { AuthContext } from '../../Providers/AuthProvider';
 import Swal from 'sweetalert2';
+
 
 const SignIn = () => {
     const [error, setError] = useState('');
 
     const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
 
-    // const { googleSignIn, createUser, updateUserProfile } = useContext(AuthContext);
+    const { googleSignIn, createUser, updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
@@ -19,47 +20,47 @@ const SignIn = () => {
     const onSubmit = data => {
         setError('');
         console.log(data)
-        // createUser(data.email, data.password)
-        //     .then(result => {
-        //         const loggedUser = result.user;
-        //         console.log(loggedUser);
-        //         updateUserProfile({
-        //             displayName: data.name,
-        //             photoURL: data.photo
-        //         })
-        //         Swal.fire({
-        //             position: 'center',
-        //             icon: 'success',
-        //             title: 'Sign up Successful',
-        //             showConfirmButton: false,
-        //             timer: 1500
-        //         })
-        //         navigate('/')
-        //     })
-        //     .catch(error => {
-        //         console.log(error.message);
-        //         setError(error.message);
-        //     })
+        createUser(data.email, data.password)
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                updateUserProfile({
+                    displayName: data.name,
+                    photoURL: data.photo
+                })
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Sign up Successful',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                navigate('/')
+            })
+            .catch(error => {
+                console.log(error.message);
+                setError(error.message);
+            })
     }
 
     const handleGoogle = () =>{
-        // googleSignIn()
-        //     .then(result =>{
-        //         const loggedUser =result.user;
-        //         console.log(loggedUser)
-        //         Swal.fire({
-        //             position: 'center',
-        //             icon: 'success',
-        //             title: 'Sign up Successful',
-        //             showConfirmButton: false,
-        //             timer: 1500
-        //         })
-        //         navigate(from, {replace: true });
-        //     })
-        //     .catch(error => {
-        //         console.log(error.message);
-        //         setError(error.message);
-        //     })
+        googleSignIn()
+            .then(result =>{
+                const loggedUser =result.user;
+                console.log(loggedUser)
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Sign up Successful',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                navigate(from, {replace: true });
+            })
+            .catch(error => {
+                console.log(error.message);
+                setError(error.message);
+            })
     }
 
     return (

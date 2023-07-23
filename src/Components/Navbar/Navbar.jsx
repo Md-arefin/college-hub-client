@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProvider';
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
 
     const navItems = <>
 
@@ -11,6 +14,12 @@ const Navbar = () => {
         <li><Link to='/my-college'>My Colleges</Link></li>
 
     </>
+
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch(err => console.log(err))
+    }
 
     return (
         <div className="navbar bg-base-100 pt-3">
@@ -27,11 +36,25 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu text-lg font-semibold menu-horizontal px-1">
-                  {navItems}
+                    {navItems}
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/' className="btn bg-rose-800 text-white hover:text-black">Log out</Link>
+                {user ? <>
+
+                    <div className="avatar hidden md:block lg:mr-5">
+                        <div className="w-8 rounded">
+                            <img src={user?.photoURL} alt={user?.displayName} />
+                        </div>
+                    </div>
+
+                    <p className='text-md font-semibold text-rose-700 mx-5 cursor-pointer'>{user?.displayName}</p>
+
+                    <Link onClick={handleLogOut} className="btn bg-rose-800 text-white font-bold hover:text-black">Logout</Link>
+                </>
+                    :
+                    <Link to='login' className="btn bg-rose-800 text-white font-bold hover:text-black">Login</Link>
+                }
             </div>
         </div>
     );
