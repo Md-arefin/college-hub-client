@@ -48,12 +48,12 @@ const CollegePage = () => {
 
             <div className='flex flex-col md:flex-row gap-5 w-[full] justify-center my-16 lg:px-16'>
 
-                <div>
+                <div className='md:mt-[100px] lg:mt-0 md:w-[50%] lg:w-[34%]'>
                     <Player
                         autoplay
                         loop
                         src="https://lottie.host/961db871-fa76-4922-b451-19d882fa7508/dUiYdFRHyH.json"
-                        className='w-[100%]'
+                        className='w-[100%] '
                     >
                         <Controls visible={!true} buttons={['play', 'repeat', 'frame', 'debug']} />
                     </Player>
@@ -61,7 +61,7 @@ const CollegePage = () => {
 
                 {/* table */}
 
-                <div className="overflow-x-auto w-full md:w-[50%] border-2 rounded-md">
+                <div className="overflow-x-auto w-full md:w-1/2 lg:w-[45%] border-2 rounded-md">
                     <table className="table table-zebra">
                         <thead>
                             <tr>
