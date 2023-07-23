@@ -44,6 +44,8 @@ const CollegePage = () => {
                 Gateway to Knowledge: College Directory
             </h3>
 
+            {/* table & Player */}
+
             <div className='flex flex-col md:flex-row gap-5 w-[full] justify-center my-16 lg:px-16'>
 
                 <div>
@@ -87,7 +89,7 @@ const CollegePage = () => {
             {/* clg card */}
 
             <h3 className='text-center my-16 text-2xl md:text-3xl lg:text-5xl font-semibold'>
-            Featured Colleges and their Fascinating Offerings
+                Featured Colleges and their Fascinating Offerings
             </h3>
 
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 mt-16'>
@@ -98,7 +100,9 @@ const CollegePage = () => {
                             <div className="card-body">
                                 <h2 className="card-title lg:text-3xl">{college.collegeName}</h2>
                                 <p><span className='font-semibold text-lg'>Admission date:</span> {college.admissionDates}</p>
-                                <p><span className='font-semibold text-lg'>Events: </span> {college.events.map((e ,i) =><li key={i}>{e}</li>)}</p>
+                                <p><span className='font-semibold text-lg'>Events: </span> {college.events.map((e, i) => <li key={i}>{e}</li>)}</p>
+                                <p><span className='font-semibold text-lg'>Research history: </span>{college.researchHistory}</p>
+                                <p><span className='font-semibold text-lg'>Sports: </span>{college.sports}</p>
                                 <p><span className='font-semibold text-lg'>Research history: </span>{college.researchHistory}</p>
                                 <p><span className='font-semibold text-lg'>Sports: </span>{college.sports}</p>
                                 <div className="card-actions justify-center
