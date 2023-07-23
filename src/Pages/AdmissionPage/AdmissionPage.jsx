@@ -60,15 +60,15 @@ const AdmissionPage = () => {
 
                 <div className='lg:w-[50%] relative'>
                     <img className='w-full' src="/images/9.jpg" alt="" />
-                    <div className='absolute top-[82%] w-[50%] left-[250px] bg-black text-white h-[200px] p-10 flex items-center justify-center'>
-                        <h4 className='text-center my-16 text-lg md:text-xl lg:text-3xl font-semibold'> Step into Your Future with Confidence</h4>
+                    <div className='absolute -top-[40px] lg:top-[82%] lg:w-[50%] w-[70%] left-14 h-[100px] md:h-[180px] md:left-[130px] lg:left-[250px] bg-black text-white lg:h-[200px] p-10 flex items-center justify-center'>
+                        <h4 className='lg:text-center my-16 text-sm md:text-xl lg:text-3xl font-semibold'> Step into Your Future with Confidence</h4>
                     </div>
                 </div>
             </div>
 
             {/* form */}
 
-            <div className='mx-auto w-1/2'>
+            <div className='mx-auto md:w-1/2'>
 
                 <h3 className='text-center my-16 text-2xl md:text-3xl lg:text-5xl font-semibold'>
                     Admission Application
