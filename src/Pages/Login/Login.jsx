@@ -23,18 +23,29 @@ const Login = () => {
 
         console.log(data)
         signIn(data.email, data.password)
-            .then(result =>{
+            .then(result => {
                 const loggedUser = result.user;
-                Swal.fire({
-                    position: 'center',
-                    icon: 'success',
-                    title: 'Login Successful',
-                    showConfirmButton: false,
-                    timer: 1500
+                const saveUser = { name: loggedUser.displayName, email: loggedUser.email }
+                fetch('http://localhost:5000/users', {
+                    method: "POST",
+                    headers: {
+                        'content-type': "application/json"
+                    },
+                    body: JSON.stringify(saveUser)
                 })
-                navigate(from, {replace: true });
+                    .then(res => res.json(saveUser))
+                    .then( () => {
+                         navigate(from, { replace: true })
+                            Swal.fire({
+                                position: 'center',
+                                icon: 'success',
+                                title: 'Login Successful',
+                                showConfirmButton: false,
+                                timer: 1500
+                            })
+                    })
             })
-            .catch(err =>{
+            .catch(err => {
                 console.log(err.message)
                 setError(err.message)
             })
@@ -45,22 +56,30 @@ const Login = () => {
     const handleGoogle = () => {
         setError('');
         googleSignIn()
-            .then(result =>{
+            .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
-
-                // save user
-
-                Swal.fire({
-                    position: 'center',
-                    icon: 'success',
-                    title: 'Login Successful',
-                    showConfirmButton: false,
-                    timer: 1500
+                const saveUser = { name: loggedUser.displayName, email: loggedUser.email }
+                fetch('http://localhost:5000/users', {
+                    method: "POST",
+                    headers: {
+                        'content-type': "application/json"
+                    },
+                    body: JSON.stringify(saveUser)
                 })
-                navigate(from, {replace: true });
+                    .then(res => res.json(saveUser))
+                    .then(() => {
+                        navigate(from, { replace: true });
+                        Swal.fire({
+                            position: 'center',
+                            icon: 'success',
+                            title: 'Sign up Successful',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
+                    })
             })
-            .catch( err => {
+            .catch(err => {
                 console.log(err.message)
                 setError(err.message)
             })
