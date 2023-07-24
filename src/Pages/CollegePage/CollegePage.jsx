@@ -4,13 +4,35 @@ import { Controls, Player } from '@lottiefiles/react-lottie-player';
 const CollegePage = () => {
 
     const [colleges, setColleges] = useState([]);
+    const [clgName, setClgName] = useState([]);
+    const [showDetails, setShowDetails] = useState(false);
+
+
+
+    const handleDetailsClick = (collegeId) => {
+        const id = collegeId;
+
+        if (collegeId === id) {
+            setShowDetails(!showDetails);
+        }
+
+    };
 
     useEffect(() => {
-        fetch('data.json')
+        fetch('http://localhost:5000/colleges')
             .then(res => res.json())
             .then(data => {
                 console.log(data)
                 setColleges(data)
+            })
+    }, [])
+
+    useEffect(() => {
+        fetch('http://localhost:5000/colleges-name')
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                setClgName(data)
             })
     }, [])
 
@@ -72,8 +94,8 @@ const CollegePage = () => {
                         <tbody>
 
                             {
-                                colleges.map((clg, i) =>
-                                    < tr key={i} >
+                                clgName.map((clg, i) =>
+                                    < tr key={clg._id} >
                                         <th className='text-center'>{i + 1}</th>
                                         <td className='text-lg'>{clg.collegeName}</td>
                                     </tr>
@@ -95,19 +117,23 @@ const CollegePage = () => {
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 mt-16'>
                 {
                     colleges.map((college) =>
-                        <div key={college.id} className="card md:card-side bg-base-100 shadow-xl group">
-                            <figure><img src={college?.collegeImage} className='h-full w-[550px] rounded-md group-hover:scale-125 transition' alt={college.collegeName} /></figure>
+                        <div key={college._id} className="card md:card-side bg-base-100 shadow-xl group">
+                            <figure><img src={college?.collegeImage} className='h-full w-[520px] rounded-md group-hover:scale-125 transition' alt={college.collegeName} /></figure>
                             <div className="card-body">
                                 <h2 className="card-title lg:text-3xl">{college.collegeName}</h2>
+                                <p><span className='font-semibold text-lg'>Ratings: </span>{college.ratings}</p>
                                 <p><span className='font-semibold text-lg'>Admission date:</span> {college.admissionDates}</p>
-                                <p><span className='font-semibold text-lg'>Events: </span> {college.events.map((e, i) => <li key={i}>{e}</li>)}</p>
-                                <p><span className='font-semibold text-lg'>Research history: </span>{college.researchHistory}</p>
-                                <p><span className='font-semibold text-lg'>Sports: </span>{college.sports}</p>
-                                <p><span className='font-semibold text-lg'>Research history: </span>{college.researchHistory}</p>
-                                <p><span className='font-semibold text-lg'>Sports: </span>{college.sports}</p>
-                                <div className="card-actions justify-center
-                                 mt-2">
-                                    <button className="btn bg-rose-800 text-white w-[50%] hover:text-black">Details</button>
+                                <p><span className='font-semibold text-lg'>Total Research: </span>{college.totalResearch}</p>
+                                {showDetails && (
+                                    <>
+                                        <p><span className='font-semibold text-lg'>Events: </span>{college.events.map((e, i) => <li key={e.i}>{e}</li>)}</p>
+
+                                        <p><span className='font-semibold text-lg'>Sports: </span>{college.sports.map((e, i) => <li key={e.i}>{e}</li>)}</p>
+
+                                    </>
+                                )}
+                                <div className="card-actions justify-center mt-2">
+                                    <button onClick={() => handleDetailsClick(college._id)} className="btn bg-rose-800 text-white w-[50%] hover:text-black">{showDetails ? 'Hide Details' : 'Details'}</button>
                                 </div>
                             </div>
                         </div>
