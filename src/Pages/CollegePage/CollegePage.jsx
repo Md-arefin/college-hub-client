@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Controls, Player } from '@lottiefiles/react-lottie-player';
+import { Rating } from '@smastrom/react-rating';
+import '@smastrom/react-rating/style.css'
 
 const CollegePage = () => {
 
@@ -121,7 +123,13 @@ const CollegePage = () => {
                             <figure><img src={college?.collegeImage} className='h-full w-[520px] rounded-md group-hover:scale-125 transition' alt={college.collegeName} /></figure>
                             <div className="card-body">
                                 <h2 className="card-title lg:text-3xl">{college.collegeName}</h2>
-                                <p><span className='font-semibold text-lg'>Ratings: </span>{college.ratings}</p>
+                                <div className='flex items-center justify-center gap-3 mr-[90px]'> <p className='font-semibold text-lg w-[50px]'>Ratings: </p><span >
+                                    {college.ratings} </span> <Rating
+                                        style={{ maxWidth: 120 }}
+                                        value={college.ratings}
+                                        readOnly
+                                    />
+                                </div>
                                 <p><span className='font-semibold text-lg'>Admission date:</span> {college.admissionDates}</p>
                                 <p><span className='font-semibold text-lg'>Total Research: </span>{college.totalResearch}</p>
                                 {showDetails && (
