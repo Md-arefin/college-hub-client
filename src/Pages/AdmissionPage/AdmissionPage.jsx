@@ -16,7 +16,7 @@ const AdmissionPage = () => {
     };
 
     useEffect(() => {
-        fetch('https://college-booking-server-six.vercel.app/colleges-name')
+        fetch('http://localhost:5000/colleges-name')
             .then(res => res.json())
             .then(data => {
                 console.log(data)
