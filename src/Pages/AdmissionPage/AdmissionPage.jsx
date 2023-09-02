@@ -11,6 +11,7 @@ const img_hosting_token = import.meta.env.VITE_Image_Upload_Token;
 const AdmissionPage = () => {
     const { user } = useContext(AuthContext);
     const [colleges, setColleges] = useState([]);
+    const [uploadButtonText, setUploadButtonText] = useState('Upload Photo');
     const [showDetails, setShowDetails] = useState(false);
     const [collegeDetails, setCollegeDetails] = useState({});
     const img_hosting_url = `https://api.imgbb.com/1/upload?key=${img_hosting_token}`;
@@ -34,6 +35,10 @@ const AdmissionPage = () => {
         setCollegeDetails('');
         setShowDetails(false);
     };
+
+    const handleImageChange = (image) =>{
+        setUploadButtonText(image.name)
+    }
 
     const handleApplicationSubmit = (event) => {
         event.preventDefault();
@@ -245,10 +250,16 @@ const AdmissionPage = () => {
                                     <div className="form-control">
 
                                         <label className="input cursor-pointer input-bordered mt-5 bg-red-400 mx-auto">
-                                            <input type="file" placeholder="photo" name='photo' className=" hidden" />
+                                            <input 
+                                            onChange={(event) => { handleImageChange(event.target.files[0])
+                                            }}
+                                            type="file" 
+                                            placeholder="photo" 
+                                            name='photo' 
+                                            className=" hidden" />
 
                                             <div className="text-lg font-semibold mt-2  text-center">
-                                                Upload your photo
+                                               {uploadButtonText}
                                             </div>
                                         </label>
 
