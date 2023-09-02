@@ -1,19 +1,25 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
+import Swal from 'sweetalert2';
+import { ImCancelCircle } from 'react-icons/im';
+import { GiConfirmed } from 'react-icons/gi';
+
+
+
+const img_hosting_token = import.meta.env.VITE_Image_Upload_Token;
 
 const AdmissionPage = () => {
-
     const { user } = useContext(AuthContext);
     const [colleges, setColleges] = useState([]);
     const [showDetails, setShowDetails] = useState(false);
     const [collegeDetails, setCollegeDetails] = useState({});
-
+    const img_hosting_url = `https://api.imgbb.com/1/upload?key=${img_hosting_token}`;
 
     useEffect(() => {
         fetch('http://localhost:5000/colleges-name')
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 setColleges(data)
             })
     }, []);
@@ -24,20 +30,81 @@ const AdmissionPage = () => {
         setShowDetails(true);
     };
 
+    const handleDetailsClickCancel = () => {
+        setCollegeDetails('');
+        setShowDetails(false);
+    };
+
     const handleApplicationSubmit = (event) => {
         event.preventDefault();
-        const clgDetail = collegeDetails;
+        const {admissionDates, admissionProcess, collegeImage, collegeName, events, eventsDetails, ratings, researchHistory, researchWorks, sports, sportsCategories, totalResearch } = collegeDetails;
         const form = event.target;
         const studentName = form.name.value;
-        const DOB = form.DOB.value;
-        const address = form.address.value;
+        const email = form.email.value;
         const subject = form.subject.value;
         const phone = form.phone.value;
+        const address = form.address.value;
+        const DOB = form.DOB.value;
+        const photo = form.photo.files[0];
 
+        // console.log(photo);
 
+        const formData = new FormData();
+        formData.append("image", photo);
+        fetch(img_hosting_url, {
+            method: "POST",
+            body: formData
+        })
+            .then(res => res.json())
+            .then(imgResponse => {
+                if (imgResponse.success) {
+                    const imgURL = imgResponse.data.display_url;
 
-        console.log(address, studentName, DOB, subject, phone);
+                    const applicantData = {
+                        imgURL,
+                        studentName,
+                        email,
+                        subject,
+                        phone,
+                        address,
+                        DOB,
+                        admissionDates,
+                        admissionProcess,
+                        collegeImage,
+                        collegeName,
+                        events,
+                        eventsDetails,
+                        ratings,
+                        researchHistory,
+                        researchWorks,
+                        sports,
+                        sportsCategories,
+                        totalResearch
+                    }
 
+                    fetch('http://localhost:5000/applied-college', {
+                        method: "POST",
+                        headers: {
+                            "content-type" : "application/json"
+                        },
+                        body: JSON.stringify(applicantData)
+                    })
+                    .then(res => res.json())
+                    .then( data => {
+                        if (data.insertedId) {
+                            setShowDetails(false);
+                            setCollegeDetails('');
+                            Swal.fire({
+                                position: 'center',
+                                icon: 'success',
+                                title: 'Apply Successful',
+                                showConfirmButton: false,
+                                timer: 1500
+                            })
+                        }
+                    })
+                }
+            })
     }
 
 
@@ -120,6 +187,24 @@ const AdmissionPage = () => {
 
                                     <div className="form-control">
                                         <label className="label">
+                                            <span className="label-text text-white">Email</span>
+                                        </label>
+                                        <input type="text"
+                                            defaultValue={user ? user.email : ''}
+                                            placeholder="Candidate Email" name='email' className="input input-bordered" required />
+                                    </div>
+                                    
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text text-white">College Name</span>
+                                        </label>
+                                        <input type="text"
+                                            defaultValue={collegeDetails ? collegeDetails.collegeName : ''}
+                                            placeholder="enter college name" name='collegeName' className="input input-bordered" required />
+                                    </div>
+
+                                    <div className="form-control">
+                                        <label className="label">
                                             <span className="label-text text-white">Subject</span>
                                         </label>
                                         <select name='subject' className="input input-bordered" required>
@@ -135,14 +220,6 @@ const AdmissionPage = () => {
 
                                         </select>
 
-                                    </div>
-                                    <div className="form-control">
-                                        <label className="label">
-                                            <span className="label-text text-white">Email</span>
-                                        </label>
-                                        <input type="text"
-                                            defaultValue={user ? user.email : ''}
-                                            placeholder="Candidate Email" name='email' className="input input-bordered" required />
                                     </div>
 
                                     <div className="form-control">
@@ -167,7 +244,7 @@ const AdmissionPage = () => {
                                     </div>
                                     <div className="form-control">
 
-                                        <label className="input cursor-pointer input-bordered mt-5 bg-red-400 w-2/3 mx-auto">
+                                        <label className="input cursor-pointer input-bordered mt-5 bg-red-400 mx-auto">
                                             <input type="file" placeholder="photo" name='photo' className=" hidden" />
 
                                             <div className="text-lg font-semibold mt-2  text-center">
@@ -177,8 +254,15 @@ const AdmissionPage = () => {
 
                                     </div>
 
-                                    <div className="form-control mt-6">
-                                        <input type='submit' value='Submit' className="btn bg-black text-white hover:bg-white hover:text-black w-1/2 border-none mx-auto" />
+                                    <div className="form-control mt-6 flex gap-5 flex-col lg:flex-row justify-between items-center">
+                                        <button type='submit' value='Submit' className="btn text-lg bg-black text-white hover:bg-white hover:text-black w-1/2 border-none mx-auto" >
+                                        Submit
+                                        <GiConfirmed className='text-lg'/>
+                                        </button>
+
+                                        <button onClick={handleDetailsClickCancel} className="btn text-lg bg-black text-white hover:bg-white hover:text-black w-1/2 border-none"> Cancel 
+                                        <ImCancelCircle  className='text-lg'/>
+                                        </button>
                                     </div>
                                 </form>
                             </div>
