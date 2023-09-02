@@ -36,7 +36,7 @@ const AdmissionPage = () => {
 
 
 
-        console.log(address,studentName, DOB,subject,phone  );
+        console.log(address, studentName, DOB, subject, phone);
 
     }
 
@@ -98,87 +98,92 @@ const AdmissionPage = () => {
             <div className='mx-auto md:w-2/3'>
 
                 {
-                showDetails && <>
-                    <h3 className='text-center my-16 text-2xl md:text-3xl lg:text-5xl font-semibold'>
-                        Admission Application
-                    </h3>
+                    showDetails && <>
+                        <h3 className='text-center my-16 text-2xl md:text-3xl lg:text-5xl font-semibold'>
+                            Admission Application
+                        </h3>
 
-                    <div className="hero-content">
+                        <div className="hero-content">
 
-                        <div className="card w-full shadow-2xl bg-rose-900">
+                            <div className="card w-full shadow-2xl bg-rose-900">
 
-                            <form onSubmit={handleApplicationSubmit} className="card-body">
+                                <form onSubmit={handleApplicationSubmit} className="card-body">
 
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text text-white">Name</span>
-                                    </label>
-                                    <input type="text"
-                                        defaultValue={user ? user.displayName : ''}
-                                        placeholder="Candidate Name" name='name' className="input input-bordered" required />
-                                </div>
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text text-white">Name</span>
+                                        </label>
+                                        <input type="text"
+                                            defaultValue={user ? user.displayName : ''}
+                                            placeholder="Candidate Name" name='name' className="input input-bordered" required />
+                                    </div>
 
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text text-white">Subject</span>
-                                    </label>
-                                    <select name='subject' className="input input-bordered" required>
-                                        <option value="">-- Select a Subject --</option>
-                                        <option value="Mathematics">Mathematics</option>
-                                        <option value="Accounting">Accounting</option>
-                                        <option value="Economics">Economics</option>
-                                        <option value="Information Technology">Information Technology</option>
-                                        <option value="Science">Science</option>
-                                        <option value="Science">History</option>
-                                        <option value="Science">English</option>
-                                        <option value="Computer Science">Computer Science</option>
-                                       
-                                    </select>
-                                   
-                                </div>
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text text-white">Email</span>
-                                    </label>
-                                    <input type="text"
-                                        defaultValue={user ? user.email : ''}
-                                        placeholder="Candidate Email" name='email' className="input input-bordered" required />
-                                </div>
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text text-white">Subject</span>
+                                        </label>
+                                        <select name='subject' className="input input-bordered" required>
+                                            <option value="">-- Select a Subject --</option>
+                                            <option value="Mathematics">Mathematics</option>
+                                            <option value="Accounting">Accounting</option>
+                                            <option value="Economics">Economics</option>
+                                            <option value="Information Technology">Information Technology</option>
+                                            <option value="Science">Science</option>
+                                            <option value="Science">History</option>
+                                            <option value="Science">English</option>
+                                            <option value="Computer Science">Computer Science</option>
 
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text text-white">Phone</span>
-                                    </label>
-                                    <input type="text" placeholder="Candidate Phone number" name='phone' className="input input-bordered" required />
-                                </div>
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text text-white">Address</span>
-                                    </label>
-                                    <input type="text" placeholder="address" name='address' className="input input-bordered" required />
-                                </div>
+                                        </select>
 
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text text-white">Date Of Birth</span>
-                                    </label>
-                                    <input type="date"
-                                        name='DOB' className="input input-bordered" required />
-                                </div>
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text text-white">Photo</span>
-                                    </label>
-                                    <input type="file" placeholder="photo" name='photo' className=" input input-bordered" />
-                                </div>
+                                    </div>
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text text-white">Email</span>
+                                        </label>
+                                        <input type="text"
+                                            defaultValue={user ? user.email : ''}
+                                            placeholder="Candidate Email" name='email' className="input input-bordered" required />
+                                    </div>
 
-                                <div className="form-control mt-6">
-                                    <input type='submit' value='Submit' className="btn bg-black text-white hover:bg-white hover:text-black w-1/2 border-none mx-auto" />
-                                </div>
-                            </form>
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text text-white">Phone</span>
+                                        </label>
+                                        <input type="text" placeholder="Candidate Phone number" name='phone' className="input input-bordered" required />
+                                    </div>
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text text-white">Address</span>
+                                        </label>
+                                        <input type="text" placeholder="address" name='address' className="input input-bordered" required />
+                                    </div>
+
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text text-white">Date Of Birth</span>
+                                        </label>
+                                        <input type="date"
+                                            name='DOB' className="input input-bordered" required />
+                                    </div>
+                                    <div className="form-control">
+
+                                        <label className="input cursor-pointer input-bordered mt-5 bg-red-400 w-2/3 mx-auto">
+                                            <input type="file" placeholder="photo" name='photo' className=" hidden" />
+
+                                            <div className="text-lg font-semibold mt-2  text-center">
+                                                Upload your photo
+                                            </div>
+                                        </label>
+
+                                    </div>
+
+                                    <div className="form-control mt-6">
+                                        <input type='submit' value='Submit' className="btn bg-black text-white hover:bg-white hover:text-black w-1/2 border-none mx-auto" />
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-                </>
+                    </>
                 }
 
             </div>
