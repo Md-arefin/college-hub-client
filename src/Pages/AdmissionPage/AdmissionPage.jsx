@@ -1,19 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../../Providers/AuthProvider';
 
 const AdmissionPage = () => {
 
+    const { user } = useContext(AuthContext);
     const [colleges, setColleges] = useState([]);
     const [showDetails, setShowDetails] = useState(false);
+    const [collegeDetails, setCollegeDetails] = useState({});
 
-
-
-    const handleDetailsClick = (collegeId) => {
-        const id = collegeId;
-
-        setShowDetails(true);
-
-
-    };
 
     useEffect(() => {
         fetch('http://localhost:5000/colleges-name')
@@ -22,9 +16,31 @@ const AdmissionPage = () => {
                 console.log(data)
                 setColleges(data)
             })
-    }, [])
+    }, []);
 
-    console.log(colleges)
+
+    const handleDetailsClick = (college) => {
+        setCollegeDetails(college);
+        setShowDetails(true);
+    };
+
+    const handleApplicationSubmit = (event) => {
+        event.preventDefault();
+        const clgDetail = collegeDetails;
+        const form = event.target;
+        const studentName = form.name.value;
+        const DOB = form.DOB.value;
+        const address = form.address.value;
+        const subject = form.subject.value;
+        const phone = form.phone.value;
+
+
+
+        console.log(address,studentName, DOB,subject,phone  );
+
+    }
+
+
 
     return (
         <div>
@@ -61,7 +77,7 @@ const AdmissionPage = () => {
                                 colleges.map((clg, i) =>
                                     < tr key={i} >
                                         <th className='text-center'>{i + 1}</th>
-                                        <td onClick={() => handleDetailsClick(clg._id)} className='text-lg cursor-pointer'>{clg.collegeName}</td>
+                                        <td onClick={() => handleDetailsClick(clg)} className='text-lg cursor-pointer'>{clg.collegeName}</td>
                                     </tr>
                                 )
                             }
@@ -79,10 +95,10 @@ const AdmissionPage = () => {
 
             {/* form */}
 
-            <div className='mx-auto md:w-1/2'>
+            <div className='mx-auto md:w-2/3'>
 
-
-                {showDetails && <>
+                {
+                showDetails && <>
                     <h3 className='text-center my-16 text-2xl md:text-3xl lg:text-5xl font-semibold'>
                         Admission Application
                     </h3>
@@ -90,46 +106,64 @@ const AdmissionPage = () => {
                     <div className="hero-content">
 
                         <div className="card w-full shadow-2xl bg-rose-900">
-                            <form className="card-body">
+
+                            <form onSubmit={handleApplicationSubmit} className="card-body">
 
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text text-white">Name</span>
                                     </label>
-                                    <input type="text" placeholder="Candidate Name" name='name' className="input input-bordered" />
+                                    <input type="text"
+                                        defaultValue={user ? user.displayName : ''}
+                                        placeholder="Candidate Name" name='name' className="input input-bordered" required />
                                 </div>
 
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text text-white">Subject</span>
                                     </label>
-                                    <input type="text" placeholder="Subject" name='subject' className="input input-bordered" />
+                                    <select name='subject' className="input input-bordered" required>
+                                        <option value="">-- Select a Subject --</option>
+                                        <option value="Mathematics">Mathematics</option>
+                                        <option value="Accounting">Accounting</option>
+                                        <option value="Economics">Economics</option>
+                                        <option value="Information Technology">Information Technology</option>
+                                        <option value="Science">Science</option>
+                                        <option value="Science">History</option>
+                                        <option value="Science">English</option>
+                                        <option value="Computer Science">Computer Science</option>
+                                       
+                                    </select>
+                                   
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text text-white">Email</span>
                                     </label>
-                                    <input type="text" placeholder="Candidate Email" name='email' className="input input-bordered" />
+                                    <input type="text"
+                                        defaultValue={user ? user.email : ''}
+                                        placeholder="Candidate Email" name='email' className="input input-bordered" required />
                                 </div>
 
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text text-white">Phone</span>
                                     </label>
-                                    <input type="text" placeholder="Candidate Phone number" name='phone' className="input input-bordered" />
+                                    <input type="text" placeholder="Candidate Phone number" name='phone' className="input input-bordered" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text text-white">Address</span>
                                     </label>
-                                    <input type="text" placeholder="address" name='address' className="input input-bordered" />
+                                    <input type="text" placeholder="address" name='address' className="input input-bordered" required />
                                 </div>
 
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text text-white">Date Of Birth</span>
                                     </label>
-                                    <input type="text" placeholder="date of birth" name='DOB' className="input input-bordered" />
+                                    <input type="date"
+                                        name='DOB' className="input input-bordered" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
@@ -144,8 +178,8 @@ const AdmissionPage = () => {
                             </form>
                         </div>
                     </div>
-                </>}
-
+                </>
+                }
 
             </div>
 

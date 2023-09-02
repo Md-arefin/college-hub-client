@@ -7,18 +7,7 @@ const CollegePage = () => {
 
     const [colleges, setColleges] = useState([]);
     const [clgName, setClgName] = useState([]);
-    const [showDetails, setShowDetails] = useState(false);
-
-
-
-    const handleDetailsClick = (collegeId) => {
-        const id = collegeId;
-
-        if (collegeId === id) {
-            setShowDetails(!showDetails);
-        }
-
-    };
+    const [showDetails, setShowDetails] = useState('');
 
     useEffect(() => {
         fetch('http://localhost:5000/colleges')
@@ -38,7 +27,12 @@ const CollegePage = () => {
             })
     }, [])
 
-    console.log(colleges)
+    // console.log(colleges)
+
+    const handleDetailsClick = (id) => {
+
+            setShowDetails(prev=>!prev?id : "");
+    };
 
     return (
         <div>
@@ -132,7 +126,8 @@ const CollegePage = () => {
                                 </div>
                                 <p><span className='font-semibold text-lg'>Admission date:</span> {college.admissionDates}</p>
                                 <p><span className='font-semibold text-lg'>Total Research: </span>{college.totalResearch}</p>
-                                {showDetails && (
+
+                                {showDetails === college._id && (
                                     <>
                                         <p><span className='font-semibold text-lg'>Events: </span>{college.events.map((e, i) => <li key={e.i}>{e}</li>)}</p>
 
@@ -140,8 +135,9 @@ const CollegePage = () => {
 
                                     </>
                                 )}
+
                                 <div className="card-actions justify-center mt-2">
-                                    <button onClick={() => handleDetailsClick(college._id)} className="btn bg-rose-800 text-white w-[50%] hover:text-black">{showDetails ? 'Hide Details' : 'Details'}</button>
+                                    <button onClick={() => handleDetailsClick(college._id)} className="btn bg-rose-800 text-white w-[50%] hover:text-black">{showDetails === college._id ? 'Hide Details' : 'Details'}</button>
                                 </div>
                             </div>
                         </div>

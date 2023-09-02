@@ -9,6 +9,7 @@ const CollegeCard = () => {
             .then(res => res.json())
             .then(data => {
                 // console.log(data)
+                // http://localhost:5000/
                 setColleges(data)
             })
     }, [])
