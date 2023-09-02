@@ -1,19 +1,28 @@
 import { Rating } from '@smastrom/react-rating';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Review from './Review';
+import { AuthContext } from '../../Providers/AuthProvider';
+import arrow from '../../assets/arrow-circle-2.png'
 
 const MyCollege = () => {
-
+    const { user } = useContext(AuthContext);
     const [myCollege, setMyCollege] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:5000/get-my-college')
+        fetch(`http://localhost:5000/get-my-college/${user?.email}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
-                setMyCollege(data)
+                if (data.length == 0) {
+                    setLoading(true);
+                } else {
+                    setMyCollege(data);
+                    setLoading(false);
+                }
             })
     }, []);
+
+
 
     return (
         <div>
@@ -25,9 +34,19 @@ const MyCollege = () => {
 
             </div>
 
-            <h3 className='text-center my-16 text-2xl md:text-3xl lg:text-5xl font-semibold'>
-                Applied College
-            </h3>
+            {
+                loading ? <div className='my-16 flex flex-col md:flex-row items-center justify-center gap-5'>
+                    <img src={arrow} className='animate-spin w-10 ' />
+                    <p className='text-2xl'>Waiting for you to apply</p>
+                </div> : <h3 className='text-center my-16 text-2xl md:text-3xl lg:text-5xl font-semibold'>
+                    Applied College
+                </h3>
+            }
+
+
+
+
+
 
             {/* college details */}
 
