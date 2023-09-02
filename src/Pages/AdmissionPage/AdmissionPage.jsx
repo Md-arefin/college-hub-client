@@ -3,6 +3,9 @@ import { AuthContext } from '../../Providers/AuthProvider';
 import Swal from 'sweetalert2';
 import { ImCancelCircle } from 'react-icons/im';
 import { GiConfirmed } from 'react-icons/gi';
+import { MdSchool } from 'react-icons/md';
+import { BiSolidBadgeCheck } from 'react-icons/bi';
+import { Controls, Player } from '@lottiefiles/react-lottie-player';
 
 
 
@@ -36,13 +39,13 @@ const AdmissionPage = () => {
         setShowDetails(false);
     };
 
-    const handleImageChange = (image) =>{
+    const handleImageChange = (image) => {
         setUploadButtonText(image.name)
     }
 
     const handleApplicationSubmit = (event) => {
         event.preventDefault();
-        const {admissionDates, admissionProcess, collegeImage, collegeName, events, eventsDetails, ratings, researchHistory, researchWorks, sports, sportsCategories, totalResearch } = collegeDetails;
+        const { admissionDates, admissionProcess, collegeImage, collegeName, events, eventsDetails, ratings, researchHistory, researchWorks, sports, sportsCategories, totalResearch } = collegeDetails;
         const form = event.target;
         const studentName = form.name.value;
         const email = form.email.value;
@@ -90,24 +93,24 @@ const AdmissionPage = () => {
                     fetch('http://localhost:5000/applied-college', {
                         method: "POST",
                         headers: {
-                            "content-type" : "application/json"
+                            "content-type": "application/json"
                         },
                         body: JSON.stringify(applicantData)
                     })
-                    .then(res => res.json())
-                    .then( data => {
-                        if (data.insertedId) {
-                            setShowDetails(false);
-                            setCollegeDetails('');
-                            Swal.fire({
-                                position: 'center',
-                                icon: 'success',
-                                title: 'Apply Successful',
-                                showConfirmButton: false,
-                                timer: 1500
-                            })
-                        }
-                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            if (data.insertedId) {
+                                setShowDetails(false);
+                                setCollegeDetails('');
+                                Swal.fire({
+                                    position: 'center',
+                                    icon: 'success',
+                                    title: 'Apply Successful',
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                })
+                            }
+                        })
                 }
             })
     }
@@ -133,6 +136,14 @@ const AdmissionPage = () => {
                 Seamless Admission Process: Enter Your Details and Secure Your Future
             </h3>
 
+            <div className='lg:w-full relative lg:mt-40'>
+                <img className='w-full' src="/images/9.jpg" alt="" />
+                <div className='absolute -top-[40px] lg:-top-[100px] lg:w-[80%] w-[70%] left-14 h-[100px] md:h-[180px] md:left-[130px] lg:left-[250px] bg-black text-white lg:h-[300px] p-10 flex items-center justify-center'>
+                    <MdSchool className='lg:text-4xl lg:mx-5' />
+                    <h4 className='lg:text-center my-16 text-sm md:text-xl lg:text-3xl font-semibold'> Step into Your Future with Confidence</h4>
+                </div>
+            </div>
+
             <div className='my-16 flex flex-col-reverse lg:flex-row gap-5 justify-center'>
 
                 <div className="overflow-x-auto w-full border-2 rounded-md lg:w-[50%]">
@@ -157,10 +168,19 @@ const AdmissionPage = () => {
                     </table>
                 </div>
 
-                <div className='lg:w-[50%] relative'>
-                    <img className='w-full' src="/images/9.jpg" alt="" />
-                    <div className='absolute -top-[40px] lg:top-[82%] lg:w-[50%] w-[70%] left-14 h-[100px] md:h-[180px] md:left-[130px] lg:left-[250px] bg-black text-white lg:h-[200px] p-10 flex items-center justify-center'>
-                        <h4 className='lg:text-center my-16 text-sm md:text-xl lg:text-3xl font-semibold'> Step into Your Future with Confidence</h4>
+                <div className='md:ml-52  md:w-[50%] lg:w-[27%]'>
+                    <Player
+                        autoplay
+                        loop
+                        src="https://lottie.host/15758716-bf79-4186-88dd-b161dee980a3/0rSMzGiGTR.json"
+                        className='w-[100%] '
+                    >
+                        <Controls visible={!true} buttons={['play', 'repeat', 'frame', 'debug']} />
+                    </Player>
+
+                    <div className='bg-slate-400 h-20 rounded-md flex items-center font-bold text-lg px-5'>
+
+                        <p className='flex gap-2'><span><BiSolidBadgeCheck className='mt-1'/></span> Achieve your dreams by clicking on the College.</p>
                     </div>
                 </div>
             </div>
@@ -198,7 +218,7 @@ const AdmissionPage = () => {
                                             defaultValue={user ? user.email : ''}
                                             placeholder="Candidate Email" name='email' className="input input-bordered" required />
                                     </div>
-                                    
+
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text text-white">College Name</span>
@@ -250,16 +270,17 @@ const AdmissionPage = () => {
                                     <div className="form-control">
 
                                         <label className="input cursor-pointer input-bordered mt-5 bg-red-400 mx-auto">
-                                            <input 
-                                            onChange={(event) => { handleImageChange(event.target.files[0])
-                                            }}
-                                            type="file" 
-                                            placeholder="photo" 
-                                            name='photo' 
-                                            className=" hidden" />
+                                            <input
+                                                onChange={(event) => {
+                                                    handleImageChange(event.target.files[0])
+                                                }}
+                                                type="file"
+                                                placeholder="photo"
+                                                name='photo'
+                                                className=" hidden" />
 
                                             <div className="text-lg font-semibold mt-2  text-center">
-                                               {uploadButtonText}
+                                                {uploadButtonText}
                                             </div>
                                         </label>
 
@@ -267,12 +288,12 @@ const AdmissionPage = () => {
 
                                     <div className="form-control mt-6 flex gap-5 flex-col lg:flex-row justify-between items-center">
                                         <button type='submit' value='Submit' className="btn text-lg bg-black text-white hover:bg-white hover:text-black w-1/2 border-none mx-auto" >
-                                        Submit
-                                        <GiConfirmed className='text-lg'/>
+                                            Submit
+                                            <GiConfirmed className='text-lg' />
                                         </button>
 
-                                        <button onClick={handleDetailsClickCancel} className="btn text-lg bg-black text-white hover:bg-white hover:text-black w-1/2 border-none"> Cancel 
-                                        <ImCancelCircle  className='text-lg'/>
+                                        <button onClick={handleDetailsClickCancel} className="btn text-lg bg-black text-white hover:bg-white hover:text-black w-1/2 border-none"> Cancel
+                                            <ImCancelCircle className='text-lg' />
                                         </button>
                                     </div>
                                 </form>
