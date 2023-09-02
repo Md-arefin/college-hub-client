@@ -1,5 +1,6 @@
 import { Rating } from '@smastrom/react-rating';
 import React, { useEffect, useState } from 'react';
+import Review from './Review';
 
 const MyCollege = () => {
 
@@ -38,7 +39,7 @@ const MyCollege = () => {
                         <figure><img src={clg.collegeImage} alt="" /></figure>
                         <div className="card-body w-full lg:max-w-1/2">
                             <h2 className="text-center font-bold text-xl lg:text-3xl">{clg.collegeName}</h2>
-                            
+
                             <div className='flex items-center gap-5'>
                                 <span className='font-semibold text-lg'>Applicant Photo
                                     : </span>
@@ -73,7 +74,7 @@ const MyCollege = () => {
                                 <span className='font-semibold text-lg'>Phone : </span>
                                 {clg.phone}
                             </p>
-                           
+
                             <p>
                                 <span className='font-semibold text-lg'>Date of Birth
                                     : </span>
@@ -84,7 +85,7 @@ const MyCollege = () => {
                                 {clg.address}
 
                             </p>
-                            
+
                             <p>
                                 <span className='font-semibold text-lg'>Application Procedure: </span>
                                 {clg.admissionProcess.applicationProcedure}
@@ -149,7 +150,7 @@ const MyCollege = () => {
                             <p>
                                 <span className='font-semibold text-lg'>Sports : </span>
 
-                                <div className='flex flex-col lg:flex-row gap-5'>
+                                <div className='flex flex-col md:flex-row gap-5'>
 
                                     <div>
                                         <span className='pl-10 font-semibold'>Indoor Sports :  </span>{clg.sportsCategories.indoorSports.map((r, i) => <div
@@ -206,7 +207,8 @@ const MyCollege = () => {
                     </div>) : ''
                 }
             </div>
-
+            {/* Review */}
+            <Review />
         </div>
     );
 };

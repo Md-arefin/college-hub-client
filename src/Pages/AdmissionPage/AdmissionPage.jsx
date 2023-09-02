@@ -180,7 +180,7 @@ const AdmissionPage = () => {
 
                     <div className='bg-slate-400 h-20 rounded-md flex items-center font-bold text-lg px-5'>
 
-                        <p className='flex gap-2'><span><BiSolidBadgeCheck className='mt-1'/></span> Achieve your dreams by clicking on the College.</p>
+                        <p className='flex gap-2'><span><BiSolidBadgeCheck className='mt-1' /></span> Achieve your dreams by clicking on the College.</p>
                     </div>
                 </div>
             </div>
