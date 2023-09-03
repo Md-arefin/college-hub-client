@@ -151,7 +151,7 @@ const AdmissionPage = () => {
                         <thead>
                             <tr>
                                 <th></th>
-                                <th className='font-semibold text-black text-lg text-center'>Name</th>
+                                <th className='font-semibold text-black text-lg text-center'>College</th>
                             </tr>
                         </thead>
                         <tbody>

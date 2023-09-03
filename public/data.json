@@ -1,522 +1,98 @@
 [
   {
-    "id": 1,
-    "collegeImage": "https://i.ibb.co/9ZkFbQ3/zhanhui-li-1iux-Ws-IZ6ko-unsplash.jpg",
-    "collegeName": "City University",
-    "admissionDates": "September 1 - September 20",
-    "events": [
-      "Welcome Party",
-      "Annual Science Fair",
-      "Cultural Showcase"
-    ],
-    "researchHistory": "City University is renowned for its pioneering research in urban planning and sustainability.",
-    "sports": [
-      "Soccer",
-      "Table Tennis",
-      "Track and Field"
-    ],
-    "admissionProcess": {
-      "eligibilityCriteria": "Minimum 75% in High School",
-      "applicationProcedure": "Online application form, followed by entrance exam and interview"
+
+    "img": "https://i.ibb.co/myTXNhz/oluwakemi-solaja-ZN52-ZBFkw4-Y-unsplash.jpg",
+    "title": "The Impact of Online Learning on Student Achievement",
+    "abstract": "Online learning has become increasingly prevalent in modern education, with the growth of digital technology and internet access. This research aims to examine the effects of online learning on student academic achievement compared to traditional classroom instruction. The study considers various factors that influence the effectiveness of online learning and explores scenarios in which it can be as effective as, or even more effective than, in-person education. To do so, it analyzes academic performance, engagement, and learning outcomes of students in both online and traditional settings.",
+    "introduction": "The adoption of online learning has revolutionized the educational landscape. It offers flexibility, accessibility, and the ability to tailor learning experiences to individual needs. However, concerns about its impact on student achievement have arisen. This study seeks to shed light on the subject and provide insights into the effectiveness of online learning.",
+    "methodology": {
+      "participants": "The research involved a diverse group of students from various educational levels, including high school and college.",
+      "experimentalDesign": "Students were randomly assigned to two groups: an online learning group and a traditional classroom group. Both groups followed the same curriculum and used identical instructional materials.",
+      "dataCollection": "Data on academic performance, engagement levels, and learning outcomes were collected throughout the academic term. Performance was measured through regular assessments, quizzes, and final exams. Engagement was assessed through participation rates and interaction in discussions. Learning outcomes were evaluated based on the mastery of course content."
     },
-    "eventsDetails": {
-      "techFest": {
-        "date": "November 5 - November 7",
-        "description": "Annual technical festival showcasing innovations and projects"
-      }
+    "results": {
+      "results1": "The analysis showed that students in the online learning group performed at a level statistically equivalent to their peers in the traditional classroom group. Both groups achieved similar average scores on assessments.",
+      "results2": " Interestingly, the online learning group exhibited higher engagement in certain aspects. They participated more actively in online discussions and collaborative projects, demonstrating a deeper level of engagement with peers and course materials.",
+      "results3": " Learning outcomes were comparable between the two groups. Both achieved a similar level of mastery of the course content."
     },
-    "researchWorks": {
-      "history": "Established in 1905, Example University has a long history of research excellence.",
-      "currentProjects": [
-        "Cancer Research",
-        "Renewable Energy Solutions",
-        "AI and Machine Learning"
-      ]
-    },
-    "sportsCategories": {
-      "indoorSports": [
-        "Table Tennis",
-        "Chess",
-        "Badminton"
-      ],
-      "outdoorSports": [
-        "Football",
-        "Cricket",
-        "Basketball"
-      ],
-      "waterSports": [
-        "Swimming",
-        "Rowing",
-        "Sailing"
-      ]
-    }
+    "discussion": "The findings of this study suggest that online learning can be as effective as traditional classroom instruction when specific conditions are met. The flexibility and convenience of online learning may contribute to increased engagement, particularly in discussions and collaborative activities. However, success in online learning may require self-discipline and strong time management skills.",
+    "conclusion": "Online learning has the potential to be a viable and effective educational platform. Its impact on student achievement is contingent on various factors, including the design of the online course, the commitment of the learner, and the quality of instructional materials. As technology continues to advance, educators should explore ways to optimize online learning experiences to maximize student ",
+    "references": [
+      "Green Cities Initiative. (2021). Sustainable Urban Planning Best Practices: Lessons from Leading Cities. Green Cities Publications.",
+      "United Nations. (2019). Sustainable Cities and Communities: A Global Perspective. UN Press.",
+      "Smith, E. A., & Johnson, M. S. (2020). Greening Urban Development: Strategies for Sustainable Cities. Urban Studies Journal, 34(5), 561-578."
+    ]
   },
   {
-    "id": 2,
-    "collegeImage": "https://i.ibb.co/FHB1yQC/michael-marsh-U0d-BV-Qei-Yk-unsplash.jpg",
-    "collegeName": "Liberty College",
-    "admissionDates": "July 10 - July 31",
-    "events": [
-      "Freshers' Bash",
-      "Literary Symposium",
-      "Sports Carnival"
-    ],
-    "researchHistory": "Liberty College has a long-standing tradition of promoting liberal arts and encouraging critical thinking.",
-    "sports": [
-      "Basketball",
-      "Swimming",
-      "Chess"
-    ],
-    "admissionProcess": {
-      "eligibilityCriteria": "Minimum 75% in High School",
-      "applicationProcedure": "Online application form, followed by entrance exam and interview"
+    
+    "img": "https://i.ibb.co/Yc1zwjZ/shai-pal-b-Gph-NIz-Q5-OA-unsplash.jpg",
+    "title": "Environmental Sustainability in Urban Planning",
+    "abstract": "This research explores strategies for incorporating sustainable practices in urban planning and development. It analyzes case studies of cities that have successfully implemented eco-friendly initiatives to reduce their environmental footprint.",
+    "introduction": "Urbanization poses significant challenges to the environment. This study delves into innovative approaches to urban planning that prioritize sustainability and examines their impact on environmental conservation.",
+    "methodology": {
+      "participants": "The research involved a diverse group of students from various educational levels, including high school and college.",
+      "experimentalDesign": "Several cities worldwide were selected for in-depth case studies. These cities implemented sustainable urban planning practices, including green infrastructure, renewable energy, and efficient public transportation systems",
+      "dataCollection": "Data was collected on energy consumption, greenhouse gas emissions, green spaces, and public satisfaction with urban planning initiatives."
     },
-    "eventsDetails": {
-      "techFest": {
-        "date": "November 5 - November 7",
-        "description": "Annual technical festival showcasing innovations and projects"
-      }
+    "results": {
+      "results1": "The research revealed a notable reduction in greenhouse gas emissions in cities that implemented sustainable urban planning practices. Energy-efficient buildings and green transportation systems significantly contributed to this reduction.",
+      "results2": "Residents in cities with sustainable urban planning reported higher levels of satisfaction with their living environment, particularly in terms of air quality and access to green spaces.",
+      "results3": " Learning outcomes were comparable between the two groups. Both achieved a similar level of mastery of the course content."
     },
-    "researchWorks": {
-      "history": "Established in 1905, Example University has a long history of research excellence.",
-      "currentProjects": [
-        "Cancer Research",
-        "Renewable Energy Solutions",
-        "AI and Machine Learning"
-      ]
-    },
-    "sportsCategories": {
-      "indoorSports": [
-        "Table Tennis",
-        "Chess",
-        "Badminton"
-      ],
-      "outdoorSports": [
-        "Football",
-        "Cricket",
-        "Basketball"
-      ],
-      "waterSports": [
-        "Swimming",
-        "Rowing",
-        "Sailing"
-      ]
-    }
+    "discussion": "The findings underscore the importance of integrating environmental sustainability into urban planning efforts. By prioritizing eco-friendly initiatives, cities can reduce their environmental impact while enhancing residents' quality of life.",
+    "conclusion": "Sustainable urban planning is crucial for mitigating the environmental impact of urbanization. Cities that prioritize sustainability can achieve a healthier environment and improved well-being for their residents.",
+    "references": [
+      "Green Cities Initiative. (2021). Sustainable Urban Planning Best Practices: Lessons from Leading Cities. Green Cities Publications.",
+      "United Nations. (2019). Sustainable Cities and Communities: A Global Perspective. UN Press.",
+      "Smith, E. A., & Johnson, M. S. (2020). Greening Urban Development: Strategies for Sustainable Cities. Urban Studies Journal, 34(5), 561-578."
+    ]
   },
   {
-    "id": 3,
-    "collegeImage": "https://i.ibb.co/jyhXX3T/vadim-sherbakov-d6eb-Y-fa-OO0-unsplash.jpg",
-    "collegeName": "TechHub Institute",
-    "admissionDates": "August 25 - September 15",
-    "events": [
-      "Tech Summit",
-      "Hackathon",
-      "Cultural Fusion"
-    ],
-    "researchHistory": "TechHub Institute is at the forefront of technology research, fostering innovation and entrepreneurship.",
-    "sports": [
-      "Badminton",
-      "Cricket",
-      "Gymnastics"
-    ],
-    "admissionProcess": {
-      "eligibilityCriteria": "Minimum 75% in High School",
-      "applicationProcedure": "Online application form, followed by entrance exam and interview"
+    
+    "img": "https://i.ibb.co/FhkL1B9/national-cancer-institute-701-FJcj-LAQ-unsplash.jpg",
+    "title": "The Role of Artificial Intelligence in Healthcare",
+    "abstract": "This article discusses the growing influence of artificial intelligence (AI) in the healthcare sector. It investigates how AI technologies can enhance patient care, diagnostics, and medical research.",
+    "introduction": "Advancements in AI have opened up new possibilities in healthcare. This study explores the applications of AI in healthcare and evaluates its potential to revolutionize the industry.",
+    "methodology": {
+      "participants": "A comprehensive review of existing literature on AI in healthcare was conducted to identify key trends and advancements.",
+      "experimentalDesign": "Several cities worldwide were selected for in-depth case studies. These cities implemented sustainable urban planning practices, including green infrastructure, renewable energy, and efficient public transportation systems",
+      "dataCollection": "Several healthcare institutions and companies that have successfully implemented AI technologies were analyzed to assess their impact."
     },
-    "eventsDetails": {
-      "techFest": {
-        "date": "November 5 - November 7",
-        "description": "Annual technical festival showcasing innovations and projects"
-      }
+    "results": {
+      "results1": "AI-driven diagnostic tools demonstrated high accuracy and speed in identifying medical conditions, leading to earlier and more accurate diagnoses.",
+      "results2": "AI-powered chatbots and virtual assistants improved patient engagement, provided timely medical information, and reduced administrative burdens on healthcare providers.",
+      "results3": " Learning outcomes were comparable between the two groups. Both achieved a similar level of mastery of the course content."
     },
-    "researchWorks": {
-      "history": "Established in 1905, Example University has a long history of research excellence.",
-      "currentProjects": [
-        "Cancer Research",
-        "Renewable Energy Solutions",
-        "AI and Machine Learning"
-      ]
-    },
-    "sportsCategories": {
-      "indoorSports": [
-        "Table Tennis",
-        "Chess",
-        "Badminton"
-      ],
-      "outdoorSports": [
-        "Football",
-        "Cricket",
-        "Basketball"
-      ],
-      "waterSports": [
-        "Swimming",
-        "Rowing",
-        "Sailing"
-      ]
-    }
+    "discussion": "The findings highlight the transformative potential of AI in healthcare. From disease detection to patient engagement, AI has the capacity to enhance healthcare delivery.",
+    "conclusion": "Artificial intelligence is poised to play a pivotal role in the future of healthcare. As AI technologies continue to evolve, healthcare institutions must embrace these innovations to improve patient care and outcomes.",
+    "references": [
+      "Topol, E. J. (2019). The Topol Review: Preparing the Healthcare Workforce to Deliver the Digital Future. NHS Health Education England.",
+      "Patel, A., & Gupta, A. (2020). Artificial Intelligence in Healthcare: Current Trends and Future Possibilities. Journal of Healthcare Technology, 42(3), 215-228.",
+      "Medical AI Consortium. (2021). AI-Enabled Healthcare: Advancements and Best Practices. MAC Publications."
+    ]
   },
   {
-    "id": 4,
-    "collegeImage": "https://i.ibb.co/qRbZybf/somesh-kesarla-suresh-h-Wqr-I3-Cy-Pu-M-unsplash.jpg",
-    "collegeName": "Greenwood University",
-    "admissionDates": "June 5 - June 30",
-    "events": [
-      "Green Initiatives Expo",
-      "Literary Festival",
-      "Annual Sports Gala"
-    ],
-    "researchHistory": "Greenwood University is committed to environmental research and sustainability projects.",
-    "sports": [
-      "Tennis",
-      "Archery",
-      "Yoga"
-    ],
-    "admissionProcess": {
-      "eligibilityCriteria": "Minimum 75% in High School",
-      "applicationProcedure": "Online application form, followed by entrance exam and interview"
+   
+    "title": "Effects of Social Media on Mental Health",
+    "img": "https://i.ibb.co/m8xvRqB/alexander-shatov-mr4-JG4-SYOF8-unsplash.jpg",
+    "abstract": "This research investigates the relationship between social media usage and mental health outcomes, focusing on the impact of excessive screen time and cyberbullying on individuals' well-being.",
+    "introduction": "The widespread use of social media has raised concerns about its potential effects on mental health. This study explores the associations between social media activity and various aspects of mental well-being.",
+    "methodology": {
+      "participants": "Surveys were administered to a diverse group of participants to collect data on their social media usage patterns, experiences of cyberbullying, and self-reported mental health.",
+      "experimentalDesign": "Several cities worldwide were selected for in-depth case studies. These cities implemented sustainable urban planning practices, including green infrastructure, renewable energy, and efficient public transportation systems",
+      "dataCollection": "Statistical analyses were conducted to identify correlations and trends between social media usage, cyberbullying, and mental health indicators."
     },
-    "eventsDetails": {
-      "techFest": {
-        "date": "November 5 - November 7",
-        "description": "Annual technical festival showcasing innovations and projects"
-      }
+    "results": {
+      "results1": "Participants who reported spending more time on social media platforms exhibited higher levels of anxiety and depression symptoms.",
+      "results2": " Individuals who experienced cyberbullying on social media platforms reported lower self-esteem and increased psychological distress.",
+      "results3": " Learning outcomes were comparable between the two groups. Both achieved a similar level of mastery of the course content."
     },
-    "researchWorks": {
-      "history": "Established in 1905, Example University has a long history of research excellence.",
-      "currentProjects": [
-        "Cancer Research",
-        "Renewable Energy Solutions",
-        "AI and Machine Learning"
-      ]
-    },
-    "sportsCategories": {
-      "indoorSports": [
-        "Table Tennis",
-        "Chess",
-        "Badminton"
-      ],
-      "outdoorSports": [
-        "Football",
-        "Cricket",
-        "Basketball"
-      ],
-      "waterSports": [
-        "Swimming",
-        "Rowing",
-        "Sailing"
-      ]
-    }
-  },
-  {
-    "id": 5,
-    "collegeImage": "https://i.ibb.co/2Mr0WsY/keming-tan-x-Myg-EKgsnes-unsplash.jpg",
-    "collegeName": "Pacific Coast College",
-    "admissionDates": "October 5 - October 25",
-    "events": [
-      "Coastal Cleanup Drive",
-      "Tech Symposium",
-      "Cultural Extravaganza"
-    ],
-    "researchHistory": "Pacific Coast College specializes in marine biology research and oceanic studies.",
-    "sports": [
-      "Surfing",
-      "Volleyball",
-      "Sailing"
-    ],
-    "admissionProcess": {
-      "eligibilityCriteria": "Minimum 75% in High School",
-      "applicationProcedure": "Online application form, followed by entrance exam and interview"
-    },
-    "eventsDetails": {
-      "techFest": {
-        "date": "November 5 - November 7",
-        "description": "Annual technical festival showcasing innovations and projects"
-      }
-    },
-    "researchWorks": {
-      "history": "Established in 1905, Example University has a long history of research excellence.",
-      "currentProjects": [
-        "Cancer Research",
-        "Renewable Energy Solutions",
-        "AI and Machine Learning"
-      ]
-    },
-    "sportsCategories": {
-      "indoorSports": [
-        "Table Tennis",
-        "Chess",
-        "Badminton"
-      ],
-      "outdoorSports": [
-        "Football",
-        "Cricket",
-        "Basketball"
-      ],
-      "waterSports": [
-        "Swimming",
-        "Rowing",
-        "Sailing"
-      ]
-    }
-  },
-  {
-    "id": 6,
-    "collegeImage": "https://i.ibb.co/9ZkFbQ3/zhanhui-li-1iux-Ws-IZ6ko-unsplash.jpg",
-    "collegeName": "Global Business School",
-    "admissionDates": "December 1 - December 20",
-    "events": [
-      "MBA Conference",
-      "International Business Summit",
-      "Cultural Carnival"
-    ],
-    "researchHistory": "Global Business School is recognized for its research in international trade and business strategies.",
-    "sports": [
-      "Basketball",
-      "Squash",
-      "Karate"
-    ],
-    "admissionProcess": {
-      "eligibilityCriteria": "Minimum 75% in High School",
-      "applicationProcedure": "Online application form, followed by entrance exam and interview"
-    },
-    "eventsDetails": {
-      "techFest": {
-        "date": "November 5 - November 7",
-        "description": "Annual technical festival showcasing innovations and projects"
-      }
-    },
-    "researchWorks": {
-      "history": "Established in 1905, Example University has a long history of research excellence.",
-      "currentProjects": [
-        "Cancer Research",
-        "Renewable Energy Solutions",
-        "AI and Machine Learning"
-      ]
-    },
-    "sportsCategories": {
-      "indoorSports": [
-        "Table Tennis",
-        "Chess",
-        "Badminton"
-      ],
-      "outdoorSports": [
-        "Football",
-        "Cricket",
-        "Basketball"
-      ],
-      "waterSports": [
-        "Swimming",
-        "Rowing",
-        "Sailing"
-      ]
-    }
-  },
-  {
-    "id": 7,
-    "collegeImage": "https://i.ibb.co/FHB1yQC/michael-marsh-U0d-BV-Qei-Yk-unsplash.jpg",
-    "collegeName": "Heritage Institute",
-    "admissionDates": "August 10 - August 31",
-    "events": [
-      "Heritage Day Celebrations",
-      "Literary Symposium",
-      "Sports Extravaganza"
-    ],
-    "researchHistory": "Heritage Institute preserves cultural history and conducts research in archaeology and anthropology.",
-    "sports": [
-      "Cricket",
-      "Football",
-      "Kabaddi"
-    ],
-    "admissionProcess": {
-      "eligibilityCriteria": "Minimum 75% in High School",
-      "applicationProcedure": "Online application form, followed by entrance exam and interview"
-    },
-    "eventsDetails": {
-      "techFest": {
-        "date": "November 5 - November 7",
-        "description": "Annual technical festival showcasing innovations and projects"
-      }
-    },
-    "researchWorks": {
-      "history": "Established in 1905, Example University has a long history of research excellence.",
-      "currentProjects": [
-        "Cancer Research",
-        "Renewable Energy Solutions",
-        "AI and Machine Learning"
-      ]
-    },
-    "sportsCategories": {
-      "indoorSports": [
-        "Table Tennis",
-        "Chess",
-        "Badminton"
-      ],
-      "outdoorSports": [
-        "Football",
-        "Cricket",
-        "Basketball"
-      ],
-      "waterSports": [
-        "Swimming",
-        "Rowing",
-        "Sailing"
-      ]
-    }
-  },
-  {
-    "id": 8,
-    "collegeImage": "https://i.ibb.co/jyhXX3T/vadim-sherbakov-d6eb-Y-fa-OO0-unsplash.jpg",
-    "collegeName": "Health Sciences University",
-    "admissionDates": "April 15 - May 15",
-    "events": [
-      "Medical Conference",
-      "Health Fair",
-      "Cultural Fest"
-    ],
-    "researchHistory": "Health Sciences University excels in medical research and healthcare advancements.",
-    "sports": [
-      "Basketball",
-      "Tennis",
-      "Swimming"
-    ],
-    "admissionProcess": {
-      "eligibilityCriteria": "Minimum 75% in High School",
-      "applicationProcedure": "Online application form, followed by entrance exam and interview"
-    },
-    "eventsDetails": {
-      "techFest": {
-        "date": "November 5 - November 7",
-        "description": "Annual technical festival showcasing innovations and projects"
-      }
-    },
-    "researchWorks": {
-      "history": "Established in 1905, Example University has a long history of research excellence.",
-      "currentProjects": [
-        "Cancer Research",
-        "Renewable Energy Solutions",
-        "AI and Machine Learning"
-      ]
-    },
-    "sportsCategories": {
-      "indoorSports": [
-        "Table Tennis",
-        "Chess",
-        "Badminton"
-      ],
-      "outdoorSports": [
-        "Football",
-        "Cricket",
-        "Basketball"
-      ],
-      "waterSports": [
-        "Swimming",
-        "Rowing",
-        "Sailing"
-      ]
-    }
-  },
-  {
-    "id": 9,
-    "collegeImage": "https://i.ibb.co/qRbZybf/somesh-kesarla-suresh-h-Wqr-I3-Cy-Pu-M-unsplash.jpg",
-    "collegeName": "Innovation Academy",
-    "admissionDates": "October 1 - October 30",
-    "events": [
-      "Innovation Expo",
-      "Start-up Pitch Competition",
-      "Cultural Fusion"
-    ],
-    "researchHistory": "Innovation Academy fosters creativity and entrepreneurship through cutting-edge research.",
-    "sports": [
-      "Table Tennis",
-      "Chess",
-      "Gymnastics"
-    ],
-    "admissionProcess": {
-      "eligibilityCriteria": "Minimum 75% in High School",
-      "applicationProcedure": "Online application form, followed by entrance exam and interview"
-    },
-    "eventsDetails": {
-      "techFest": {
-        "date": "November 5 - November 7",
-        "description": "Annual technical festival showcasing innovations and projects"
-      }
-    },
-    "researchWorks": {
-      "history": "Established in 1905, Example University has a long history of research excellence.",
-      "currentProjects": [
-        "Cancer Research",
-        "Renewable Energy Solutions",
-        "AI and Machine Learning"
-      ]
-    },
-    "sportsCategories": {
-      "indoorSports": [
-        "Table Tennis",
-        "Chess",
-        "Badminton"
-      ],
-      "outdoorSports": [
-        "Football",
-        "Cricket",
-        "Basketball"
-      ],
-      "waterSports": [
-        "Swimming",
-        "Rowing",
-        "Sailing"
-      ]
-    }
-  },
-  {
-    "id": 10,
-    "collegeImage": "https://i.ibb.co/2Mr0WsY/keming-tan-x-Myg-EKgsnes-unsplash.jpg",
-    "collegeName": "Art and Design College",
-    "admissionDates": "July 15 - August 15",
-    "events": [
-      "Art Exhibition",
-      "Design Symposium",
-      "Cultural Showcase"
-    ],
-    "researchHistory": "Art and Design College celebrates artistic expression and contributes to design research.",
-    "sports": [
-      "Yoga",
-      "Badminton",
-      "Tennis"
-    ],
-    "admissionProcess": {
-      "eligibilityCriteria": "Minimum 75% in High School",
-      "applicationProcedure": "Online application form, followed by entrance exam and interview"
-    },
-    "eventsDetails": {
-      "techFest": {
-        "date": "November 5 - November 7",
-        "description": "Annual technical festival showcasing innovations and projects"
-      }
-    },
-    "researchWorks": {
-      "history": "Established in 1905, Example University has a long history of research excellence.",
-      "currentProjects": [
-        "Cancer Research",
-        "Renewable Energy Solutions",
-        "AI and Machine Learning"
-      ]
-    },
-    "sportsCategories": {
-      "indoorSports": [
-        "Table Tennis",
-        "Chess",
-        "Badminton"
-      ],
-      "outdoorSports": [
-        "Football",
-        "Cricket",
-        "Basketball"
-      ],
-      "waterSports": [
-        "Swimming",
-        "Rowing",
-        "Sailing"
-      ]
-    }
+    "discussion": "The findings underscore the importance of mindful social media usage and highlight the potential negative consequences of excessive screen time and cyberbullying on mental health.",
+    "conclusion": "While social media offers numerous benefits, its usage can have adverse effects on mental well-being. Promoting responsible online behavior and providing resources for mental health support are crucial.",
+    "references": [
+      "Twenge, J. M., & Campbell, W. K. (2018). Associations Between Screen Time and Lower Psychological Well-being Among Children and Adolescents: Evidence From a Population-Based Study. JAMA Pediatrics, 172(11), 1118-1125.",
+      "Kowalski, R. M., & Limber, S. P. (2020). Psychological, Physical, and Academic Correlates of Cyberbullying and Traditional Bullying. Journal of Adolescent Health, 53(1), S13-S20.",
+      "Mental Health Foundation. (2019). Social Media and Mental Health: A Review of the Evidence. MHF Publications."
+    ]
   }
 ]
