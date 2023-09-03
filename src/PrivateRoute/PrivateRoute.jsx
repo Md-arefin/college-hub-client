@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
-import { FaSpinner } from 'react-icons/fa'
+import arrow from '../assets/arrow-circle-2.png'
 import { AuthContext } from '../Providers/AuthProvider';
 
 const PrivateRoute = ({children}) => {
@@ -9,7 +9,10 @@ const PrivateRoute = ({children}) => {
     const location = useLocation();
 console.log(user,"private");
     if(loading){
-        return <FaSpinner className='animate-spin mx-auto text-3xl text-red-600 my-96'/>
+        return <div className='my-16 flex flex-col md:flex-row items-center justify-center gap-5'>
+        <img src={arrow} className='animate-spin w-10 ' />
+        <p className='text-2xl'>Loading...</p>
+    </div>
     }
     
     if(user){

@@ -31,12 +31,12 @@ const router = createBrowserRouter([
       {
         path: "/colleges/:collegeDetails",
         element: <CollegeDetail/>,
-        loader: ({params}) => fetch(`http://localhost:5000/colleges/${params.collegeDetails}`) 
+        loader: ({params}) => fetch(`https://college-booking-server-md-arefin.vercel.app/colleges/${params.collegeDetails}`) 
       },
       {
         path: "/get-research/:id",
         element: <ResearchDetails />,
-        loader: ({params}) => fetch(`http://localhost:5000/get-research/${params.id}`) 
+        loader: ({params}) => fetch(`https://college-booking-server-md-arefin.vercel.app/get-research/${params.id}`) 
       },
       {
         path: "/admission",

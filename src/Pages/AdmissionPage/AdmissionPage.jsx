@@ -23,7 +23,7 @@ const AdmissionPage = () => {
     const location = useLocation();
 
     useEffect(() => {
-        fetch('http://localhost:5000/colleges-name')
+        fetch('https://college-booking-server-md-arefin.vercel.app/colleges-name')
             .then(res => res.json())
             .then(data => {
                 // console.log(data)
@@ -94,7 +94,7 @@ const AdmissionPage = () => {
                             totalResearch
                         }
     
-                        fetch('http://localhost:5000/applied-college', {
+                        fetch('https://college-booking-server-md-arefin.vercel.app/applied-college', {
                             method: "POST",
                             headers: {
                                 "content-type": "application/json"

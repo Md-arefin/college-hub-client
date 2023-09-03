@@ -10,7 +10,7 @@ const MyCollege = () => {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/get-my-college/${user?.email}`)
+        fetch(`https://college-booking-server-md-arefin.vercel.app/get-my-college/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 if (data.length == 0) {
