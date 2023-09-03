@@ -6,6 +6,7 @@ import { GiConfirmed } from 'react-icons/gi';
 import { MdSchool } from 'react-icons/md';
 import { BiSolidBadgeCheck } from 'react-icons/bi';
 import { Controls, Player } from '@lottiefiles/react-lottie-player';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 
@@ -18,6 +19,8 @@ const AdmissionPage = () => {
     const [showDetails, setShowDetails] = useState(false);
     const [collegeDetails, setCollegeDetails] = useState({});
     const img_hosting_url = `https://api.imgbb.com/1/upload?key=${img_hosting_token}`;
+    const navigate = useNavigate();
+    const location = useLocation();
 
     useEffect(() => {
         fetch('http://localhost:5000/colleges-name')
@@ -45,74 +48,89 @@ const AdmissionPage = () => {
 
     const handleApplicationSubmit = (event) => {
         event.preventDefault();
-        const { admissionDates, admissionProcess, collegeImage, collegeName, events, eventsDetails, ratings, researchHistory, researchWorks, sports, sportsCategories, totalResearch } = collegeDetails;
-        const form = event.target;
-        const studentName = form.name.value;
-        const email = form.email.value;
-        const subject = form.subject.value;
-        const phone = form.phone.value;
-        const address = form.address.value;
-        const DOB = form.DOB.value;
-        const photo = form.photo.files[0];
-
-        // console.log(photo);
-
-        const formData = new FormData();
-        formData.append("image", photo);
-        fetch(img_hosting_url, {
-            method: "POST",
-            body: formData
-        })
-            .then(res => res.json())
-            .then(imgResponse => {
-                if (imgResponse.success) {
-                    const imgURL = imgResponse.data.display_url;
-
-                    const applicantData = {
-                        imgURL,
-                        studentName,
-                        email,
-                        subject,
-                        phone,
-                        address,
-                        DOB,
-                        admissionDates,
-                        admissionProcess,
-                        collegeImage,
-                        collegeName,
-                        events,
-                        eventsDetails,
-                        ratings,
-                        researchHistory,
-                        researchWorks,
-                        sports,
-                        sportsCategories,
-                        totalResearch
-                    }
-
-                    fetch('http://localhost:5000/applied-college', {
-                        method: "POST",
-                        headers: {
-                            "content-type": "application/json"
-                        },
-                        body: JSON.stringify(applicantData)
-                    })
-                        .then(res => res.json())
-                        .then(data => {
-                            if (data.insertedId) {
-                                setShowDetails(false);
-                                setCollegeDetails('');
-                                Swal.fire({
-                                    position: 'center',
-                                    icon: 'success',
-                                    title: 'Apply Successful',
-                                    showConfirmButton: false,
-                                    timer: 1500
-                                })
-                            }
+        if(user && user.email){
+            const { admissionDates, admissionProcess, collegeImage, collegeName, events, eventsDetails, ratings, researchHistory, researchWorks, sports, sportsCategories, totalResearch } = collegeDetails;
+            const form = event.target;
+            const studentName = form.name.value;
+            const email = form.email.value;
+            const subject = form.subject.value;
+            const phone = form.phone.value;
+            const address = form.address.value;
+            const DOB = form.DOB.value;
+            const photo = form.photo.files[0];
+    
+            // console.log(photo);
+    
+            const formData = new FormData();
+            formData.append("image", photo);
+            fetch(img_hosting_url, {
+                method: "POST",
+                body: formData
+            })
+                .then(res => res.json())
+                .then(imgResponse => {
+                    if (imgResponse.success) {
+                        const imgURL = imgResponse.data.display_url;
+    
+                        const applicantData = {
+                            imgURL,
+                            studentName,
+                            email,
+                            subject,
+                            phone,
+                            address,
+                            DOB,
+                            admissionDates,
+                            admissionProcess,
+                            collegeImage,
+                            collegeName,
+                            events,
+                            eventsDetails,
+                            ratings,
+                            researchHistory,
+                            researchWorks,
+                            sports,
+                            sportsCategories,
+                            totalResearch
+                        }
+    
+                        fetch('http://localhost:5000/applied-college', {
+                            method: "POST",
+                            headers: {
+                                "content-type": "application/json"
+                            },
+                            body: JSON.stringify(applicantData)
                         })
+                            .then(res => res.json())
+                            .then(data => {
+                                if (data.insertedId) {
+                                    setShowDetails(false);
+                                    setCollegeDetails('');
+                                    Swal.fire({
+                                        position: 'center',
+                                        icon: 'success',
+                                        title: 'Apply Successful',
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    })
+                                }
+                            })
+                    }
+                })
+        }else {
+            Swal.fire({
+                title: 'Please login to Apply',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Login Now!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    navigate('/login',  {state: {from: location}})
                 }
             })
+        }
     }
 
 
@@ -287,12 +305,12 @@ const AdmissionPage = () => {
                                     </div>
 
                                     <div className="form-control mt-6 flex gap-5 flex-col lg:flex-row justify-between items-center">
-                                        <button type='submit' value='Submit' className="btn text-lg bg-black text-white hover:bg-white hover:text-black w-1/2 border-none mx-auto" >
+                                        <button type='submit' value='Submit' className="btn text-lg bg-black text-white hover:bg-white hover:text-black w-full md:w-1/2 border-none mx-auto" >
                                             Submit
                                             <GiConfirmed className='text-lg' />
                                         </button>
 
-                                        <button onClick={handleDetailsClickCancel} className="btn text-lg bg-black text-white hover:bg-white hover:text-black w-1/2 border-none"> Cancel
+                                        <button onClick={handleDetailsClickCancel} className="btn text-lg bg-black text-white hover:bg-white hover:text-black w-full md:w-1/2 border-none"> Cancel
                                             <ImCancelCircle className='text-lg' />
                                         </button>
                                     </div>

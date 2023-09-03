@@ -34,16 +34,16 @@ const Login = () => {
                     body: JSON.stringify(saveUser)
                 })
                     .then(res => res.json(saveUser))
-                    .then( () => {
-                         navigate(from, { replace: true })
-                            Swal.fire({
-                                position: 'center',
-                                icon: 'success',
-                                title: 'Login Successful',
-                                showConfirmButton: false,
-                                timer: 1500
-                            })
+                    .then(() => {
+                        Swal.fire({
+                            position: 'center',
+                            icon: 'success',
+                            title: 'Login Successful',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
                     })
+                navigate(from, { replace: true })
             })
             .catch(err => {
                 console.log(err.message)
@@ -69,7 +69,6 @@ const Login = () => {
                 })
                     .then(res => res.json(saveUser))
                     .then(() => {
-                        navigate(from, { replace: true });
                         Swal.fire({
                             position: 'center',
                             icon: 'success',
@@ -78,6 +77,7 @@ const Login = () => {
                             timer: 1500
                         })
                     })
+                navigate(from, { replace: true });
             })
             .catch(err => {
                 console.log(err.message)
