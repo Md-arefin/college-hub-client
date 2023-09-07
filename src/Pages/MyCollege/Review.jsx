@@ -9,6 +9,7 @@ const Review = () => {
 
     const handleReview = event => {
         event.preventDefault();
+       if(user && user.email){
         const form = event.target;
         const name = form.name.value;
         const review = form.review.value;
@@ -40,6 +41,20 @@ const Review = () => {
                     })
                 }
             })
+       }else {
+        Swal.fire({
+            title: 'Please login to Apply',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Login Now!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                navigate('/login',  {state: {from: location}})
+            }
+        })
+    }
     }
     return (
         <div className='mt-16'>

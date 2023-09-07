@@ -2,7 +2,7 @@ import React, {  useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 import { ImQuotesLeft, ImQuotesRight } from 'react-icons/im';
 import { Rating } from '@smastrom/react-rating';
 
@@ -19,13 +19,17 @@ const Reviews = () => {
     }, []);
 
     return (
-        <div className='my-16'>
+        <div className='my-16 mb-16 lg:mb-44'>
             <h3 className='text-center font-semibold text-xl md:text-3xl lg:text-5xl'>TESTIMONIALS</h3>
-            <h3 className="text-2xl text-center uppercase my-10">What People Say About Our Services</h3>
+            <h3 className="text-2xl text-center my-10 mb-16 lg:mb-44">What People Say About Our Services</h3>
             <div className='my-16'>
                 <Swiper
                     navigation={true}
-                    modules={[Navigation]}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                      }}
+                    modules={[Navigation, Autoplay]}
                     className="mySwiper">
                     {
                         reviews.map(review => <SwiperSlide
